@@ -1,0 +1,23 @@
+.sale-acountpay-fixedpay-list .sale-acountpay-fixedpay-item {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    background: #d1ecf0;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    color: #000;
+    font-size: 13px;
+    min-width: 55px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    padding: 0 9px;
+    -webkit-transition: background 300ms ease;
+    -moz-transition: background 300ms ease;
+    -ms-transition: background 300ms ease;
+    -o-transition: background 300ms ease;
+    transition: background 300ms ease;
+}
+.sale-acountpay-fixedpay-list .sale-acountpay-fixedpay-item:hover {
+    background: #d1e6f0;
+}

@@ -1,0 +1,569 @@
+.bx_ordercart {
+
+	.flat {
+		display: inline;
+	}
+
+	.itemphoto {
+		@include rempxem(width, $font-size-root, 120px);
+		@include rempxem(min-width, $font-size-root, 80px);
+
+		.bx_ordercart_photo_container {
+			position: relative;
+			display: inline-block;
+		}
+
+		.cnt_item {
+			position: absolute;
+			@include width($font-size-root, 24px);
+			@include height($font-size-root, 24px);
+			right: 5px;
+			bottom: 5px;
+			z-index: 10;
+			border: 1px solid #ccc;
+		}
+
+	}
+
+	.bx_ordercart_order_table_container {
+		position: relative;
+
+		@media (max-width: $screen-xs-max) {
+
+			& {
+				margin-top: 15px;
+			}
+
+		}
+
+		thead {
+
+			@media (max-width: $screen-xs-max) {
+
+				& {
+					display: none;
+				}
+
+			}
+
+		}
+
+
+		tbody {
+
+			tr {
+
+				&:first-child {
+
+					@media (max-width: $screen-xs-max) {
+
+						& {
+							border-top: 1px solid $table-border-color;
+						}
+
+					}
+
+				}
+
+				@media (max-width: $screen-xs-max) {
+
+					& {
+						border-bottom: 1px solid $table-border-color;
+					}
+
+				}
+
+				td {
+
+					@media (max-width: $screen-xs-max) {
+
+						& {
+							border: none;
+						}
+
+						> div {
+
+							&:not(.bx_item_detail_scu_small_noadaptive) {
+								display: inline-block;
+							}
+
+						}
+
+					}
+
+					&.custom {
+
+						span {
+
+							&:not(.measure_name) {
+								display: none;
+							}
+
+							&.measure_name {
+
+								@media (max-width: $screen-sm-max) {
+
+									& {
+										display: block;
+										text-align: center;
+									}
+
+								}
+
+								@media (max-width: $screen-xs-max) {
+
+									& {
+										display: inline-block;
+										text-align: center;
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					&:not(.itemphoto) {
+
+						@media (max-width: $screen-xs-max) {
+
+							& {
+								float: right;
+								width: 100%;
+								text-align: left;
+							}
+
+							&[data-label] {
+								padding-left: 15px;
+								margin-bottom: 6px;
+								padding-top: 0;
+								padding-bottom: 0;
+
+								&:before {
+									content: attr(data-label) ":";
+									padding-right: 5px;
+								}
+
+							}
+
+						}
+
+					}
+
+
+					.centered {
+
+						@media (max-width: $screen-xs-max) {
+
+							& {
+								display: inline-block;
+							}
+
+						}
+
+					}
+
+
+					&.discount {
+
+						> div {
+
+							@media (max-width: $screen-xs-max) {
+
+								& {
+									display: inline-block;
+								}
+
+							}
+
+						}
+
+					}
+
+					&.control {
+
+						@media (max-width: $screen-xs-max) {
+
+							> div {
+								margin-right: 15px;
+								display: inline-block;
+
+								a {
+
+									&:after {
+								    content: attr(title);
+						        margin-left: 6px;
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.item {
+
+		.bx_ordercart_itemtitle {
+			margin-top: 0;
+			@include rempxem(min-width, $font-size-root, 210px);
+
+			a {
+				color: $gray-dark;
+			}
+
+			@media (min-width: $screen-xs-min) {
+				@include rempxem(min-width, $font-size-root, 250px);
+			}
+
+		}
+
+		.bx_ordercart_itemart {
+			margin-bottom: 7px;
+			font-style: italic;
+			@include rempxem(padding-left, $font-size-root, 5px);
+
+			li {
+				float: left;
+
+				.bx_ordercart_itemart-name {
+					font-weight: 600;
+
+					&:after {
+						content: ":";
+					}
+
+				}
+
+				&:nth-child(2n+3) {
+					clear: both;
+				}
+
+			}
+
+			&.mb {
+				margin-bottom: 0;
+			}
+
+		}
+
+		.sku_prop_list {
+			margin-bottom: 0;
+			font-style: italic;
+			@include rempxem(padding-left, $font-size-root, 5px);
+			@include clearfix();
+
+			li {
+				float: left;
+
+				&:nth-child(2n+1) {
+					font-weight: 600;
+
+					&:after {
+						content: ":";
+					}
+
+				}
+
+				&:nth-child(2n+3) {
+					clear: both;
+				}
+
+			}
+
+		}
+
+	}
+
+	.content_price {
+		@include rempxem(font-size, $font-size-root, 12px);
+
+		@media (min-width: $screen-xs-min) {
+
+			& {
+				white-space: nowrap;
+			}
+
+		}
+
+		@media (max-width: $screen-xs-max) {
+
+			> div {
+				display: inline-block;
+
+				&.old-price {
+					display: none !important;
+				}
+
+			}
+
+		}
+
+	}
+
+	td.sum {
+		white-space: nowrap;
+
+		@media (max-width: $screen-xs-max) {
+
+			> div {
+				font-weight: 600;
+				display: inline-block;
+			}
+
+		}
+
+	}
+
+	.form-inline {
+
+		.quantity {
+			margin-top: 0;
+
+			.qty {
+				@include rempxem(height, $font-size-root, 30px);
+				@include rempxem(width, $font-size-root, 40px);
+			}
+
+		}
+
+	}
+
+	.bx_ordercart_order_pay_right {
+		text-align: right;
+	}
+
+	.bx_ordercart_order_pay_left {
+		text-align: left;
+	}
+
+	.bx_ordercart_order_sum {
+		float: right;
+		margin-bottom: 18px;
+
+		td {
+			padding-right: 8px;
+		}
+
+		#allSum_FORMATED {
+			font-weight: 600;
+		}
+
+	}
+
+	.bx_ordercart_order_pay_center {
+		text-align: right;
+
+		.checkout {
+
+			@media (max-width: $screen-xs-max) {
+
+				& {
+					display: block;
+				}
+
+			}
+
+		}
+
+	}
+
+	.bx_ordercart_order_pay {
+		text-align: right;
+		padding: $panel-footer-padding;
+		background-color: $panel-footer-bg;
+		border-top: 1px solid $panel-inner-border;
+		@include border-bottom-radius(($panel-border-radius - 1));
+	}
+
+	.bx_ordercart_coupon {
+		position: relative;
+		white-space: nowrap;
+		margin-bottom: 15px;
+
+		input {
+
+			&.bad,
+			&.good,
+			&.disabled {
+				width: 90%;
+				display: inline-block;
+				vertical-align: top;
+			  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+			  padding: $padding-base-vertical $padding-base-horizontal;
+			  font-size: $font-size-base;
+			  line-height: $line-height-base;
+			  color: $input-color;
+			  background-color: $input-bg;
+			  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+			  border: 1px solid $input-border;
+			  border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+			  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+			  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+			  // Customize the `:focus` state to imitate native WebKit styles.
+			  @include form-control-focus;
+
+			  // Placeholder
+			  @include placeholder;
+
+			  // Unstyle the caret on `<select>`s in IE10+.
+			  &::-ms-expand {
+			  	border: 0;
+			  	background-color: transparent;
+			  }
+
+			  // Disabled and read-only inputs
+			  //
+			  // HTML5 says that controls under a fieldset > legend:first-child won't be
+			  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+			  // don't honor that edge case; we style them as disabled anyway.
+			  &[disabled],
+			  &[readonly],
+			  fieldset[disabled] & {
+			  	background-color: $input-bg-disabled;
+			    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+			  }
+
+			  &[disabled],
+			  fieldset[disabled] & {
+			  	cursor: $cursor-disabled;
+			  }
+
+			  // [converter] extracted textarea& to textarea.form-control
+
+			}
+
+			.bad {
+				border: 1px solid #e16565;
+				background: rgba(225,101,101,.16);
+				box-shadow: 0 0 2px 0 rgba(225,101,101,.8);
+			}
+
+			.bad {
+				position: relative;
+				border:1px solid #59a62a;
+				background:rgba(89,166,42,.16);
+				box-shadow:0 0 2px 0 rgba(89,166,42,.8);
+			}
+
+		}
+
+		.bx_ordercart_coupon_notes {
+			@include transition(opacity $animate ease-out);
+			display: none;
+			opacity: 0;
+			white-space: normal;
+			border: 1px solid #ddd;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			max-width: 270px;
+			padding: 10px;
+			background: #fff;
+			z-index: 1010;
+			border-radius: $border-radius-base;
+			@include rempxem(font-size, $font-size-root, 13px);
+			@include rempxem(line-height, $font-size-root, 17px);
+			box-shadow: 0 3px 7px 0 rgba(0,0,0,.05);
+		}
+
+		&:hover {
+
+			.bx_ordercart_coupon_notes {
+				display: block;
+				opacity: 1;
+			}
+
+		}
+
+		span {
+			display: inline-block;
+			width: 22px;
+			height: $input-height-base;
+			vertical-align: middle;
+			margin: 0 0 0 5px;
+			cursor: pointer;
+
+			&.good {
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAoklEQVQ4y2NgIBOUb7JkY6AEAA0wBuJHQGxHrgFWQPwBiP8D8WcgliTVAHuoRpAB/4A4E10BDwED3ID4K9SAP0CciK7ACYhfg2gcBvgA8Q8kA6LQFQgB8Seogq/oBgH5QUD8EyoPooNwOTUMagOKQSAbkcRBLvEhFGjoBvWi8V2JDX1kg2AY5FV7UqMR2SBQerAkN0GBDHoJSpmUJm1uYtUCAMzalTMY8Lf6AAAAAElFTkSuQmCC") no-repeat center;
+			}
+
+			&.bad,
+			&.disabled,
+			&.good:hover {
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjA2QzFEQUU3QTJEMTFFNEJFMTJEMjJGMUE4MkZDRkYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjA2QzFEQUY3QTJEMTFFNEJFMTJEMjJGMUE4MkZDRkYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MDZDMURBQzdBMkQxMUU0QkUxMkQyMkYxQTgyRkNGRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MDZDMURBRDdBMkQxMUU0QkUxMkQyMkYxQTgyRkNGRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuRKTjMAAAC1SURBVHjaXJAhEsIwEEWTDiCoAa6CBtUKEAxHwAfHGSpxySWqUFQUh+YG3AEMOvxlfmf+kJmXnXRftr/1McaDc+4M9iGEu5OVUlqhXMCpwNaABejYUKljrxlh24EbmFHeomZKJXiZ43POdnsp8odDB6lGpMdP5KtUdirZoZDsNmEs5wmYDoeC09YoV8pvUuoHevyef6nikB7MmXljE1sJXlkm5qr5zHqtiQE8Nbgtka13/AowAFzKRSz6AcYPAAAAAElFTkSuQmCC") no-repeat center;
+
+				&:hover {
+					background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAXCAMAAAA4Nk+sAAAA1VBMVEXVLy/VMTHWMjLWMzPWNDTWNjbXODjXOjrXOzvYPT3YPz/ZQUHZQ0PaRkbaR0faSEjbTEzbTU3bTk7bT0/dWFjdWVneW1veXV3fYWHfYmLgY2PgZGTgZWXgZmbibW3ib2/jc3Pjd3flfX3lf3/mgYHojo7oj4/rm5vrnZ3soKDtpKTtpqbuqanura3wsrLxuLjxurr42tr43Nz43t754uL54+P76ur76+v77Oz87u787+/88PD88fH88vL99PT99fX99vb++Pj++fn++vr+/Pz//f3////hD3ITAAAA4klEQVQoU2XR2VrCMBRF4YWCAwIiGg1OYHGsI1qrNalGpef9H8mLNvlKXTfJ/m8P4iusWYRB+bxeH7ShvX+V1Nier1DVmhnP8wG1hs8lzzdZauNFBPnaodEwF+SiqXApfHQAIqMBtIkAOim3AKTiNGgnKQA3nAKgcnFj7cQqAE7YJnhQeqwRPCgt1qvf2Ik4XY1VRkHzPPiAs6BKWe8THgB4F6tAWXkD4B7XBZgmCkAlU4DuJxLzr1iQQtPo8FcQyXaXdZSVZ8iO6nps/NGKu57HrXhRO/HP00z1+3vR43e5/wBykDHWjqbzywAAAABJRU5ErkJggg==") no-repeat center;
+				}
+
+			}
+
+		}
+
+	}
+
+	.control {
+
+		> div {
+			@include rempxem(line-height, $font-size-root, 25px);
+		}
+
+		a {
+			text-decoration: none;
+
+			&:before {
+				font-family: FontAwesome;
+				@include rempxem(font-size, $font-size-root, $font-size-base + 3);
+			}
+
+			&.delete {
+
+				&:before {
+					content: $fa-var-trash;
+				}
+
+			}
+
+			&.delay {
+
+				&:before {
+					content: $fa-var-clock-o;
+				}
+
+			}
+
+			&.add {
+
+				&:before {
+					content: $fa-var-cart-plus;
+				}
+
+			}
+
+			&:hover {
+				color: #000;
+			}
+
+			&,
+			&:active {
+				color: $gray-light;
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,304 @@
+.hminicart {
+	@include clearfix();
+}
+
+.minicart {
+	position: relative;
+
+	> a {
+		color: $header-minicart-link-color;
+		text-decoration: none;
+
+		&:before {
+			font-family: FontAwesome;
+			content: $fa-var-shopping-bag;
+			margin-right: .6rem;
+			color: $header-minicart-bg;
+			@include font-size($font-size-root, $header-minicart-size-sm);
+		}
+
+		@media (max-width: $screen-sm-max) {
+
+			&:before {
+				color: $header-mobile-color;
+			}
+
+		}
+
+		@media (min-width: $screen-md-min) {
+
+			&:before {
+				@include font-size($font-size-root, $header-minicart-size-md);
+			}
+
+		}
+
+		@media (min-width: $screen-lg-min) {
+
+			&:before {
+				@include font-size($font-size-root, $header-minicart-size-lg);
+			}
+
+		}
+
+		@media (max-width: $screen-sm-max) {
+
+			> .minicart-text {
+				display: none;
+			}
+
+		}
+
+		&:focus,
+		&:hover {
+			color: $header-minicart-link-color;
+		}
+
+	}
+
+	> .minicart-num {
+		color: #fff;
+		display: inline-block;
+		text-align: center;
+		line-height: 22px;
+		border-radius: 50%;
+
+		@media (min-width: $screen-md-min) {
+
+			& {
+				width: 22px;
+				height: 22px;
+				margin-left: 6px;
+				background: $header-minicart-num-bg;
+			}
+
+		}
+
+		@media (max-width: $screen-sm-max) {
+
+			& {
+				color: $btn-primary-color;
+				position: absolute;
+				top: -8px;
+				right: -8px;
+				background: $brand-primary;
+				width: 22px;
+				height: 22px;
+			}
+
+		}
+
+	}
+
+	.bx-basket-item-list {
+		width: $header-minicart-sub-width;
+		padding: 0;
+
+		@media (max-width: $screen-xs-max) {
+
+			& {
+				width: 300px;
+			}
+
+		}
+
+		&-container {
+			margin-bottom: 0;
+			position: relative;
+		}
+
+		&-item-status {
+			position: relative;
+			text-transform: uppercase;
+
+			&:before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				width: 100% - floor((((($panel-body-padding / 1px) * 2) * 100) / ($header-minicart-sub-width / 1px)));
+				border-bottom: 1px solid $panel-inner-border;
+			}
+		}
+
+		.panel-body {
+			margin: -10px 0;
+
+			&._empty {
+				margin: 0px;
+				
+				> p {
+					margin: 0px;
+				}
+
+			}
+
+		}
+
+		&-item {
+			padding: 10px 0;
+			border-top: 1px solid $panel-inner-border;
+
+			&:first-child {
+				border-top: 0;
+			}
+
+			&-name {
+				margin-bottom: 5px;
+				padding-right: 30px;
+
+				> a {
+					color: $gray-darker;
+
+					&:focus,
+					&:hover {
+						color: $gray-darker;
+					}
+
+				}
+
+				> .minicart-instock {
+					color: $gray-light;
+					@include font-size($font-size-root, $font-size-base - 1);
+				}
+
+			}
+
+			&-price-block {
+				margin-bottom: 5px;
+			}
+
+			&-prop {
+				padding-left: 10px;
+				@include font-size($font-size-root, $font-size-base - 1);
+
+				&-name {
+					min-width: 70px;
+					padding-right: 20px;
+					display: inline-block;
+				}
+
+				&-value {
+					font-style: italic;
+					color: $text-color;
+				}
+
+			}
+
+			&-img {
+				text-align: center;
+			}
+
+			.bx-basket-remove {
+				@include font-size($font-size-root, $font-size-base + 3);
+				position: absolute;
+				right: 18px;
+				top: 0;
+				text-decoration: none;
+
+				&:before {
+					font-family: FontAwesome;
+					content: $fa-var-trash;
+				}
+
+				&:hover {
+					color: #000;
+				}
+
+				&,
+				&:active {
+					color: $gray-light;
+				}
+
+			}
+
+			.row {
+				margin-right: 0;
+			}
+
+		}
+
+		.bx-basket-total {
+			padding-bottom: 10px;
+			@include font-size($font-size-root, $font-size-base + 5);
+
+			&-value {
+				float: right;
+			}
+
+		}
+
+		.jScrollPaneMinicart {
+			max-height: 340px;
+
+		}
+
+	}
+
+	&.navbar-minicart {
+		@media (min-width: $screen-md-min) {
+
+			& {
+				padding: (($navbar-height - 25) / 2);
+			}
+
+		}
+
+		> a {
+			color: #f1f1f1;
+
+			&:before {
+				color: #f1f1f1;
+			}
+
+		}
+
+	}
+
+}
+
+.catalog_menu {
+
+	&.type_1 {
+
+		.navbar-minicart {
+
+			> a {
+		    color: $gray;
+
+		    &:before {
+					color: $header-minicart-bg;
+		    }
+
+			}
+
+		}
+
+	}
+
+	&.type_3 {
+
+		.navbar-minicart {
+
+			> a {
+				color: $btn-primary-color;
+
+				&:before {
+					color: $btn-primary-color;
+				}
+
+			}
+
+			> .minicart-num {
+
+					& {
+						background-color: $menu-type3-link-hover;
+						color: $btn-primary-color;
+					}
+
+			}
+
+		}
+
+	}
+
+}

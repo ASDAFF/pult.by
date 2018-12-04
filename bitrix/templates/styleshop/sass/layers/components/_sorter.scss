@@ -1,0 +1,111 @@
+.sorter {
+	padding-bottom: 10px;
+
+	label {
+		font-weight: normal;
+		padding-top: $padding-base-vertical;
+		padding-bottom: $padding-base-vertical;
+		margin-bottom: 0;
+		border: 1px solid transparent;
+
+		&:after {
+			content: ":";
+		}
+
+	}
+	
+	.sortbutton {
+		text-decoration: none;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-right: -10px;
+		@include translate(0, -50%);
+		color: $gray-light;
+
+		&:before {
+			font-family: FontAwesome;
+			@include font-size($font-size-root, $font-size-base + 1px);
+		}
+
+		&.down:before {
+			content: $fa-var-long-arrow-down;
+		}
+
+		&.up:before {
+			content: $fa-var-long-arrow-up;
+		}
+
+	}
+
+	.slist {
+
+		&:before {
+			font-family: FontAwesome;
+			@include font-size($font-size-root, $font-size-base);
+			content: $fa-var-list;
+		}
+
+	}
+
+	.sgrid {
+
+		&:before {
+			font-family: FontAwesome;
+			@include font-size($font-size-root, $font-size-base);
+			content: $fa-var-th-large;
+		}
+
+	}
+
+	.stable {
+
+		&:before {
+			font-family: FontAwesome;
+			@include font-size($font-size-root, $font-size-base);
+			content: $fa-var-align-justify;
+		}
+
+	}
+
+	@media (max-width: $screen-xs-max) {
+
+		.view {
+	    position: relative;
+
+			.btn.active ~ .btn {
+				z-index: 2;
+			}
+
+			.btn {
+				width: 35px;
+
+				&.active {
+					visibility: hidden;
+				}
+
+				&:not(.active) {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+
+				&.view-1 {
+					z-index: 1;
+				}
+
+				&:last-child {
+					z-index: 1 !important;
+				}
+
+			}
+
+		}
+
+	}
+
+	.btn-group.sort {
+		margin-right: 20px;
+	}
+
+}

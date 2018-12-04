@@ -1,0 +1,27 @@
+.bx_order_list {
+
+	.table {
+		
+		tr {
+
+			&.no_border {
+
+				td {
+					border: none;
+				}
+
+			}
+
+			td {
+
+				input[type="submit"] {
+					margin-bottom: 10px;
+				}
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,59 @@
+@import "sidebar";
+@import "sku";
+@import "fancybox";
+@import "add2basketpopup";
+@import "promo-banners";
+@import "components/slider";
+@import "components/sorter";
+@import "components/catalog";
+@import "components/catalog.element";
+@import "components/catalog.set.constructor";
+@import "components/catalog.brandblock";
+@import "components/testimonials";
+@import "components/system.pagenavigation";
+@import "components/iblock.vote";
+@import "components/catalog.store.amount";
+@import "components/breadcrumb";
+@import "components/sale.notice.product";
+@import "components/catalog.section.list";
+@import "components/search.page";
+//@import "personal";
+@import "components/news.list";
+@import "components/news.detail";
+@import "components/news.line";
+@import "components/catalog.store.list";
+@import "components/catalog.store.detail";
+@import "components/catalog.tabs";
+@import "components/catalog.compare.result";
+@import "components/catalog.compare.list";
+@import "components/catalog.product.subscribe";
+
+.category-description-block,
+.category-image-block {
+	margin-bottom: 20px;
+}
+
+.category-description-block {
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
+		margin-top: 0;
+	}
+
+}
+
+@media (min-width: $screen-md-min) {
+
+	.section-right {
+		float: right;
+	}
+
+}

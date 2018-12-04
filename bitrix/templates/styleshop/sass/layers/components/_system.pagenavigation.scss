@@ -1,0 +1,52 @@
+.bx-pagination  {
+	margin: 40px 0;
+	text-align: center;
+
+	ul {
+		margin-bottom: 0;
+
+		li {
+
+			.btn.disabled {
+				cursor: default;
+			}
+
+			a {
+				@include transition(all $animate ease-in-out);
+			}
+
+			&.bx-active {
+
+				.btn {
+					border-color: $brand-primary;
+					background-color: $brand-primary;
+					color: #fff;
+					cursor: default;
+				}
+
+			}
+
+			&:not(.bx-pag-prev,.bx-pag-next):hover {
+
+				a {
+					border-color: $brand-primary;
+					background-color: $brand-primary;
+					color: #fff;
+				}
+
+			}
+
+			@media (max-width: $screen-xs-max) {
+
+				&.bx-pag-next,
+				&.bx-pag-prev {
+					display: none;
+				}
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,264 @@
+@import "components/sender.subscribe";
+@import "components/menu.footer";
+
+#soc-subscribe {
+	background-color: $soc-subscribe-bg;
+}
+
+.footer1 {
+	border: $soc-subscribe-border;
+	border-left: 4px;
+	border-right: 4px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-right: $grid-gutter-width / 2;
+	margin-left: $grid-gutter-width / 2;
+
+	ul {
+		margin-bottom: 0;
+	}
+
+}
+
+.soc-name {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.soc-mobile {
+
+	.list-soc {
+		text-align: center;
+
+		a {
+
+			&:hover {
+				opacity: .8;
+			}
+
+			&.twitt {
+				background-color: $soc-twitt-bg-hover;
+			}
+
+			&.ok {
+				background-color: $soc-ok-bg-hover;
+
+			}
+
+			&.pinterest {
+				background-color: $soc-pinterest-p-bg-hover;
+			}
+
+			&.fb {
+				background-color: $soc-fb-bg-hover;
+			}
+
+			&.google-plus {
+				background-color: $soc-google-plus-bg-hover;
+			}
+
+		}
+
+	}
+
+}
+
+.list-soc {
+
+	a {
+		color: $soc-color;
+		background-color: $soc-bg;
+		border-radius: $soc-border-radius;
+		width: $soc-width;
+		height: $soc-height;
+		line-height: $soc-height;
+		display: block;
+		text-align: center;
+		@include font-size($font-size-root, $soc-size);
+		text-decoration: none;
+
+		&:before {
+			font-family: FontAwesome;
+		}
+
+		&.twitt {
+
+			&:before {
+				content: $fa-var-twitter;
+			}
+
+			&:hover {
+				background-color: $soc-twitt-bg-hover;
+			}
+
+		}
+
+		&.ok {
+
+			&:before {
+				content: $fa-var-odnoklassniki;
+			}
+			
+			&:hover {
+				background-color: $soc-ok-bg-hover;
+			}
+
+		}
+
+		&.pinterest {
+
+			&:before {
+				content: $fa-var-pinterest-p;
+			}
+
+			&:hover {
+				background-color: $soc-pinterest-p-bg-hover;
+			}
+
+		}
+
+		&.fb {
+
+			&:before {
+				content: $fa-var-facebook;
+			}
+
+			&:hover {
+				background-color: $soc-fb-bg-hover;
+			}
+
+		}
+
+		&.google-plus {
+
+			&:before {
+				content: $fa-var-google-plus;
+			}
+
+			&:hover {
+				background-color: $soc-google-plus-bg-hover;
+			}
+
+		}
+
+		&.vk {
+
+			&:before {
+				content: $fa-var-vk;
+			}
+
+			&:hover {
+				background-color: $soc-vk-bg-hover;
+			}
+
+		}
+
+		&.youtube {
+
+			&:before {
+				content: $fa-var-youtube;
+			}
+
+			&:hover {
+				background-color: $soc-youtube-bg-hover;
+			}
+
+		}
+
+		&.instagram {
+
+			&:before {
+				content: $fa-var-instagram;
+			}
+
+			&:hover {
+				background-color: $soc-instagram-bg-hover;
+			}
+
+		}
+
+	}
+
+}
+
+.link_address {
+
+	a {
+		color: $gray-darker;
+		text-decoration: none;
+	}
+
+}
+
+#footer {
+	background-color: $footer-bg;
+
+	.footer-container {
+		@include clearfix();
+		@include list-unstyled;
+
+		@media (max-width: $screen-sm-max) {
+
+			.footer-item {
+
+				&:nth-child(3) {
+					clear: both;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+#footer2 {
+	background-color: $footer2-bg;
+
+	.footer2-block {
+		color: $footer2-text-color;
+
+		@media (max-width: $screen-xs-max) {
+
+			& {
+				padding: 15px 0;
+			}
+
+		}
+
+	}
+
+	.block-table-td {
+		height: $footer2-height;
+		vertical-align: middle;
+		float: none;
+
+		@media (max-width: $screen-xs-max) {
+
+			& {
+				float: left;
+			}
+
+		}
+
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+		.footer2-paymethod {
+			text-align: right;
+		}
+
+	}
+
+
+}
+
+@media (max-width: $screen-sm-max) {
+	
+	#footer2 {
+		text-align: center;
+	}
+
+}

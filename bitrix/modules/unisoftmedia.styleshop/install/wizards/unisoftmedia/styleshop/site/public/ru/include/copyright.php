@@ -1,0 +1,1 @@
+© <?=date('Y')?> Copyright by AsosShop All Rights Reserved.

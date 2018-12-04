@@ -1,0 +1,46 @@
+.sale-acountpay-pp-company {
+	padding: $grid-gutter-width / 2;
+
+	.sale-acountpay-pp-company-graf-container {
+		border: 2px solid #c3cace;
+		border-radius: 2px;
+		position: relative;
+		background: #fff;
+		width: auto;
+		height: 0;
+		padding-top: 50%;
+	}
+
+	&.bx-selected {
+
+		.sale-acountpay-pp-company-graf-container {
+			border-color: $brand-info;
+		}
+
+	}
+
+	&-checkbox {
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		margin: 0;
+		padding: 0;
+		z-index: 100;
+	}
+
+	&-image {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		bottom: 5px;
+		left: 5px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+}
+
+.sale-account-pay-button {
+  margin-top: 20px;
+}

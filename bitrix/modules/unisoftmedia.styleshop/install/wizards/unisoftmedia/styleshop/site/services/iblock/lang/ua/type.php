@@ -1,0 +1,17 @@
+<?
+$MESS["NEWS_TYPE_NAME"] = "Новини";
+$MESS["NEWS_ELEMENT_NAME"] = "Новини";
+$MESS["NEWS_SECTION_NAME"] = "Розділи";
+$MESS["SERVICES_TYPE_NAME"] = "Сервіси";
+$MESS["SERVICES_ELEMENT_NAME"] = "Елементи";
+$MESS["SERVICES_SECTION_NAME"] = "Розділи";
+$MESS["CATALOG_TYPE_NAME"] = "Каталоги";
+$MESS["CATALOG_ELEMENT_NAME"] = "Товари";
+$MESS["CATALOG_SECTION_NAME"] = "Розділи";
+$MESS["OFFERS_TYPE_NAME"] = "Торгові пропозиції";
+$MESS["OFFERS_ELEMENT_NAME"] = "Пропозиції";
+$MESS["OFFERS_SECTION_NAME"] = "Розділи";
+$MESS["SLIDER_TYPE_NAME"] = "Sliders";
+$MESS["SLIDER_ELEMENT_NAME"] = "Елементи";
+$MESS["SLIDER_SECTION_NAME"] = "Розділи";
+?>

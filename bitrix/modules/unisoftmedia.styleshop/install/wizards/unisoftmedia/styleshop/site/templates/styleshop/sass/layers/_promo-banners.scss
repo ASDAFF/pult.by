@@ -1,0 +1,24 @@
+.promo-banner {
+	position: relative;
+
+	.panel-body {
+		position: absolute;
+		top: 0;
+		z-index: 2;
+
+		a {
+			text-decoration: none;
+		}
+
+	}
+
+	.banner-text {
+		clear: both;
+	}
+
+	.button {
+		display: inline-block;
+		clear: both;
+	}
+
+}

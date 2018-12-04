@@ -1,0 +1,47 @@
+##
+## PHPExcel
+##
+## Copyright (c) 2006 - 2013 PHPExcel
+##
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+##
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## Lesser General Public License for more details.
+##
+## You should have received a copy of the GNU Lesser General Public
+## License along with this library; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+##
+## @category   PHPExcel
+## @package    PHPExcel_Settings
+## @copyright  Copyright (c) 2006 - 2013 PHPExcel (http://www.codeplex.com/PHPExcel)
+## @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
+## @version    1.7.9, 2013-06-02
+##
+##
+
+
+ArgumentSeparator	= ;
+
+
+##
+##	(For future use)
+##
+currencySymbol	= Р В Р Р‹Р В РІР‚С™
+
+
+##
+##	Excel Error Codes	(For future use)
+##
+NULL	= #Р В Р’В Р РЋРЎСџР В Р’В Р В РІвЂљВ¬Р В Р’В Р В Р вЂ№Р В Р’В Р РЋРЎвЂєР В Р’В Р РЋРІР‚С”!
+DIV0	= #Р В Р’В Р Р†Р вЂљРЎСљР В Р’В Р Р†Р вЂљРЎС›Р В Р’В Р Р†Р вЂљРЎвЂќ/0!
+VALUE	= #Р В Р’В Р Р†Р вЂљРІР‚СњР В Р’В Р РЋРЎС™Р В Р’В Р РЋРІР‚в„ўР В Р’В Р вЂ™Р’В§!
+REF	= #Р В Р’В Р В Р вЂ№Р В Р’В Р В Р вЂ№Р В Р’В Р вЂ™Р’В«Р В Р’В Р Р†Р вЂљРЎвЂќ!
+NAME	= #Р В Р’В ?Р В Р’В Р РЋРЎв„ўР В Р’В Р В РІР‚РЋ?
+NUM	= #Р В Р’В Р вЂ™Р’В§Р В Р’В ?Р В Р’В Р В Р вЂ№Р В Р’В Р Р†Р вЂљРЎвЂќР В Р’В Р РЋРІР‚С”!
+NA	= #Р В Р’В Р РЋРЎС™/Р В Р’В Р Р†Р вЂљРЎСљ

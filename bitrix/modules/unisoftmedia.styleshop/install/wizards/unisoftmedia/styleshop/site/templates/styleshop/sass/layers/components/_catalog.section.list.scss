@@ -1,0 +1,64 @@
+// Sections
+.catalog-categories {
+
+	> section {
+		@include flexbox();
+		@include flex-flow(row wrap);
+		width: 100%;
+
+		> article {
+			padding-bottom: 20px;
+		}
+
+	}
+
+	section {
+
+		&.list-inline {
+
+			> article {
+				display: inline-block;
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+
+		}
+
+	}
+
+	.catalog-categories-description {
+		clear: both;
+		padding-top: 12px;
+	}
+
+	.catalog-categories-item {
+
+		&.level-1 {
+			display: block;
+			margin-bottom: 8px;
+
+			a {
+				@include rempxem(font-size, $font-size-root, 16px);
+			}
+
+			@media (max-width: $screen-xs-max) {
+
+				& {
+					margin-top: 8px;
+				}
+
+			}
+
+		}
+
+		&:not(.level-1) {
+
+			a {
+				color: $gray-light;
+			}
+
+		}
+
+	}
+
+}

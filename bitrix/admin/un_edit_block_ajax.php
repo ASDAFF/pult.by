@@ -1,0 +1,1 @@
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/unisoftmedia.styleshop/admin/un_edit_block_ajax.php");?>

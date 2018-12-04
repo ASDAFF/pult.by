@@ -1,0 +1,70 @@
+.bx_my_order_switch {
+	margin-top: -10px;
+
+	.btn {
+    margin-top: 10px;
+	}
+
+}
+
+.bx_my_order {
+
+	.bx_item_list {
+		list-style: decimal;
+
+		li {
+			line-height: 25px;
+		}
+
+	}
+
+	.bx_my_order_status {
+		color: $gray-dark;
+		padding: 10px;
+		margin-top: 8px;
+
+		&.green {
+			background-color: $state-success-bg;
+		}
+
+		&.red {
+			background-color: $state-danger-bg;
+		}
+
+		&.yellow {
+			background-color: $state-warning-bg;
+		}
+
+		&.gray {
+			background-color: #cfd4c4;
+		}
+
+	}
+
+	.btn {
+		margin-top: 15px;
+	}
+
+	tbody {
+
+		td {
+
+			@media (max-width: $screen-xs-max) {
+
+				& {
+					float: right;
+					width: 100%;
+					text-align: left;
+				}
+
+				&:last-child {
+					border: none !important;
+				}
+
+			}
+
+		}
+
+	}
+
+}

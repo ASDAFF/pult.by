@@ -1,0 +1,19 @@
+<?php
+$MESS['COPYRIGHT'] = "Создание сайтов";
+$MESS['COPYRIGHT_FOOTER'] = " Интернет магазин ";
+$MESS['COPYRIGHT_FOOTER2'] = " Все права защищены.";
+$MESS['FOOTER_CATALOG_MENU'] = "Каталог";
+$MESS['FOOTER_SUBSC'] = "Подписка на акции";
+$MESS['FOOTER_COMPANY'] = "О компании";
+$MESS['FOOTER_INFORMATION'] = "Информация";
+$MESS['FOOTER_MENU'] = "Меню";
+$MESS['FOOTER_CONTACT'] = "Контакты";
+$MESS['FOOTER_DOP'] = "Дополнительно";
+$MESS['FOOTER_ACCOUNT'] = "Помощь";
+$MESS['FOOTER_ADDRESS'] = "г. Москва пр. Московский д. 51";
+$MESS['FOOTER_SOC'] = "Мы в социальных сетях";
+$MESS["FOOTER_ADRESS"] = "Адрес";
+$MESS["FOOTER_PHONE"] = "Телефон";
+$MESS["FOOTER_EMAIL"] = "Email";
+$MESS["FOOTER_SKYPE"] = "Skype";
+$MESS['COPYRIGHT_DESC'] = "<p>Наша компания была основана в 1993 году, а наш интернет-магазин стал одним из первых магазинов, осуществляющих on-line продажу электроники в регионе. Компания специализируется на оптовой и розничной продаже электроники. На данный момент мы представляем собой крупную компанию, владеющую интернет&ndash;магазином и имеющую в своей сети единый call-центр</p>";

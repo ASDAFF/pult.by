@@ -1,0 +1,21 @@
+.leftmenu {
+
+	.nav-stacked {
+		//background-color: $menu-left-bg;
+
+		> li {
+			border-bottom: $menu-left-border;
+
+			&:not(.active) {
+
+				> a {
+					color: $gray-dark;
+				}
+
+			}
+
+		}
+
+	}
+
+}

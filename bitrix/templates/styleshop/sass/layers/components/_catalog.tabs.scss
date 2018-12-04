@@ -1,0 +1,112 @@
+.catalog-tabs {
+	margin-top: $line-height-computed;
+	position: relative;
+
+	.nav {
+
+		&-pills {
+			border-bottom: $product-title-border-bottom;
+
+			@media (max-width: $screen-xs-max) {
+
+				& {
+					padding-bottom: 30px;
+				}
+
+			}
+
+			> li {
+
+				@media (max-width: $screen-xs-max) {
+
+					& {
+						float: none;
+					}
+
+				}
+
+				&.active {
+
+					> a {
+				    opacity: 1;
+
+						@media (min-width: $screen-sm-min) {
+
+							& {
+								background-color: transparent !important;
+						    border-bottom: 3px solid $brand-primary;
+    						margin-bottom: -3px;
+    						color: $gray-dark;
+
+    						&:hover,
+    						&:focus {
+    							color: $gray-dark;
+    						}
+
+							}
+
+						}
+
+					}
+
+				}
+
+				&:not(.active) {
+
+					> a {
+						color: $headings-color;
+				    opacity: .7;
+
+				    &:hover {
+				    	 opacity: 1;
+				    }
+
+					}
+
+				}
+
+				> a {
+					text-transform: uppercase;
+					font-family: $headings-font-family;
+					font-weight: $headings-font-weight;
+					line-height: $headings-line-height;
+					font-size: $font-size-h3;
+
+					@media (max-width: $screen-xs-max) {
+
+						& {
+							text-align: center;
+						}
+
+					}
+
+					&:hover,
+					&:focus {
+
+						@media (min-width: $screen-sm-min) {
+
+							& {
+								background-color: transparent !important;
+							}
+
+						}
+
+					}
+
+					&:focus {
+						outline: none;
+					}
+
+				}
+
+				&:focus {
+					outline: none;
+				}
+
+			}
+
+		}
+
+	}
+
+}

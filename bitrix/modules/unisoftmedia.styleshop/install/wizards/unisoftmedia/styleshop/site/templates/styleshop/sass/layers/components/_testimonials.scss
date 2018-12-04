@@ -1,0 +1,45 @@
+.testimonials_1 {
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	.testimonials-title {
+		color: $testimonials-title-color;
+		margin: $testimonials-title-margin;
+		text-align: center;
+		@include font-size($font-size-root, $testimonials-title-size);
+		text-transform: uppercase;
+	}
+
+	.testimonials-item {
+		color: $testimonials-text-color;
+		font-size: $testimonials-text-size;
+		position: relative;
+		z-index: 2;
+		max-width: 800px;
+		margin: 0 auto;
+
+		.testimonials-item-container {
+			position: relative;
+			z-index: 3;
+			padding: 20px 40px;
+		}
+
+		&-name > a {
+			color: $testimonials-name-color;
+			@include font-size($font-size-root, $testimonials-name-size);
+		}
+
+		.testimonials-background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: $testimonials-bg-color;
+			opacity: $testimonials-bg-opacity;
+			z-index: 1;
+		}
+
+	}
+
+}

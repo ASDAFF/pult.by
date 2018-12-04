@@ -1,0 +1,27 @@
+.sidebar {
+
+	.section-list {
+
+		> ul {
+			@include list-unstyled;
+
+			> li {
+
+				> a {
+					padding: 5px 0;
+					display: inline-block;
+					line-height: $line-height-base;
+    			color: $dropdown-link-color;
+				}
+
+				> .count {
+					color: $gray-light;
+				}
+
+			}
+
+		}
+
+	}
+
+}

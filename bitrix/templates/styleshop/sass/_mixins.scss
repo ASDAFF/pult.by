@@ -1,0 +1,130 @@
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+@function rem($size-root, $size) {
+	$unit : unit($size);
+	@if($unit == 'em') {
+		$size: $size-root * parseInt($size);
+	}
+	@return (parseInt($size) / parseInt($size-root)) * 1rem;
+}
+
+@function em($size-root, $size) {
+	$unit : unit($size);
+	@if($unit == 'rem') {
+		$size: $font-size-root * parseInt($size);
+	}
+	@return (parseInt($size) / parseInt($size-root)) * 1em;
+}
+
+@function u($size-root, $params, $em: false) {
+	
+	$list: ();
+
+	$unit: 1rem;
+
+	@if($em) {
+		$unit: 1em;
+	}
+
+	//$unit: 1em;
+
+	@each $value in $params {
+		$list: append($list, (parseInt($value) / parseInt($size-root)) * $unit);
+	}
+
+	@return $list();
+
+}
+
+@mixin font-size($size-root, $size, $em: false) {
+	@if($em) {
+		font-size: em($size-root, $size);
+		} @else {
+			font-size: rem($size-root, $size);
+		}
+	}
+
+	@mixin width($size-root, $size, $em: false) {
+		@if($em) {
+			width: em($size-root, $size);
+			} @else {
+				width: rem($size-root, $size);
+			}
+		}
+
+		@mixin height($size-root, $size, $em: false) {
+			@if($em) {
+				height: em($size-root, $size);
+				} @else {
+					height: rem($size-root, $size);
+				}
+			}
+
+			@mixin line-height($size-root, $size, $em: false) {
+				@if($em) {
+					line-height: em($size-root, $size);
+					} @else {
+						line-height: rem($size-root, $size);
+					}
+				}
+
+				@mixin padding($size-root, $params, $em: false) {
+					padding: u($size-root, $params, $em);
+				}
+
+				@mixin margin($size-root, $params, $em: false) {
+					margin: u($size-root, $params, $em);
+				}
+
+				@mixin rempxem($prop, $size-root, $params, $em: false) {
+					#{$prop}: u($size-root, $params, $em);
+				}
+
+@mixin flexbox() {
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-flow($values) {
+	-ms-flex-flow: $values;
+	-webkit-flex-flow: $values;
+	flex-flow: $values;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+@mixin googleFontIcons($icon, $size: 14px)  {
+	content: $icon;
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: $size;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+}

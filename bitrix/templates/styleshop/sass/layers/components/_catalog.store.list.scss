@@ -1,0 +1,32 @@
+.store-map {
+	margin-bottom: 20px;
+}
+.store-list {
+  margin: -10px 0;
+
+	&-item {
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		& + & {
+			border-top: 1px solid $panel-inner-border;
+		}
+
+	}
+
+	&-name {
+		margin-top: 0;
+
+		a {
+			color: $gray-dark;
+
+			&:focus,
+			&:hover {
+				color: $gray-dark;
+			}
+
+		}
+
+	}
+
+}

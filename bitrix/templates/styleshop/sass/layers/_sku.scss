@@ -1,0 +1,368 @@
+.mask {
+
+	.block-sku {
+		position: absolute;
+		top: 50%;
+		transform: translate(0,-50%);
+		width: 100%;
+		padding: 0 7%;
+		text-align: left;
+
+		&-detail-sku-name {
+			color: #fff;
+		}
+	}
+
+}
+
+.block-sku {
+
+	&-detail-sku-name {
+		margin-bottom: 3px;
+		display: block;
+	}
+
+	&-detail-sku-container {
+
+		&-list {
+			@include clearfix();
+			@include list-unstyled;
+
+			li {
+				position: relative;
+				display: block;
+				float: left;
+				padding: 0;
+				margin: 0 5px 5px 0;
+				@include line-height($font-size-base, $sku-color-height - 2, true);
+
+				&.disabled {
+
+					> .cnt {
+						cursor: not-allowed;
+
+						&:before {
+							content: "";
+							cursor: not-allowed;
+							position: absolute;
+							display: block;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							z-index: 11;
+							background: rgba(255,255,255,.79) url(/bitrix/components/bitrix/catalog.element/templates/.default/images/missing.png) no-repeat center;
+						}
+
+					}
+
+				}
+
+				.cnt {
+					display: block;
+					text-decoration: none;
+					text-align: center;
+					cursor: pointer;
+					border: $sku-link-border;
+				}
+
+				&.active {
+					
+					.cnt {
+
+						&.color {
+							outline: 2px solid $sku-border-color-active;
+							border-color: #fff;
+						}
+
+						&.size {
+							outline: 2px solid $sku-border-color-active;
+							border-color: transparent;
+							background: #fff;
+							color: $sku-link-color-hover;
+						}
+
+					}
+
+				}
+
+				.cnt {
+					position: relative;
+
+					&:hover {
+
+						&.color {
+							outline: 2px solid $sku-border-color-active;
+							border-color: #fff;
+						}
+
+						&.size {
+							outline: 1px solid #999;
+							border-color: transparent;
+							color: $gray-dark;
+						}
+
+					}
+
+
+
+				}
+
+
+			}
+
+			.cnt {
+				@include rempxem(min-width, $font-size-base, $sku-color-width, true);
+				@include height($font-size-base, $sku-color-height, true);
+
+				&.size {
+					background: #F2F2F2;
+					background: rgb(240, 240, 240);
+					color: $gray-light;
+					padding: 0 3px;
+				}
+
+				&_item {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+
+			}
+
+		}
+
+		&-list2 {
+			@include clearfix();
+			@include list-unstyled;
+
+			li {
+				position: relative;
+				display: block;
+				float: left;
+				padding: 0;
+				margin: 0 7px 5px 0;
+
+				&.disabled {
+
+					> .cnt {
+						cursor: not-allowed;
+
+						&:before {
+							content: "";
+							cursor: not-allowed;
+							position: absolute;
+							display: block;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							z-index: 11;
+							background: rgba(255,255,255,.79) url(/bitrix/components/bitrix/catalog.element/templates/.default/images/missing.png) no-repeat center;
+						}
+
+					}
+
+				}
+
+				&.active {
+
+					.cnt {
+
+						&.color {
+							outline: 2px solid $sku-border-color-active;
+							border-color: #fff;
+						}
+
+					}
+
+				}
+
+				.cnt {
+
+					&.color {
+						display: block;
+						cursor: pointer;
+						border: $sku-link-border;
+						position: relative;
+						@include width($font-size-root, 50px);
+						@include height($font-size-root, 60px);
+
+						.cnt_item {
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							background-size: 100% auto;
+							background-repeat: no-repeat;
+						}
+
+						&:hover {
+
+							&.color {
+								outline: 2px solid $sku-border-color-active;
+								border-color: #fff;
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.tooltip-sku {
+		background-color: $tooltip-sku-bg;
+		border: 1px solid $tooltip-sku-border-color;
+		bottom: 120%;
+		left: 0;
+		padding: 3px;
+		position: absolute;
+		width: 79px;
+		z-index: 106;
+
+		img {
+			border: 1px solid $tooltip-sku-img-border-color;
+			width: 100%;
+		}
+
+		h4 {
+			margin-top: 3px;
+			margin-bottom: 2px;
+			text-align: left;
+			@include rempxem(font-size, $font-size-root, $font-size-base - 1);
+			word-wrap: break-word;
+			text-align: center;
+		}
+
+	}
+
+	> .dropdown {
+		margin-bottom: 12px;
+	}
+
+	.sku-name {
+
+		.selection {
+			color: #000;
+		}
+
+		.cnt_item {
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			-webkit-background-size: cover;
+			background-size: cover;
+			border: 1px solid rgb(218, 218, 218);
+		}
+
+	}
+
+	// type 2
+	a.color {
+
+		.cnt_item {
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			vertical-align: middle;
+			-webkit-background-size: cover;
+			background-size: cover;
+			border: 1px solid rgb(218, 218, 218);
+		}
+
+	}
+
+}
+
+.detail-product {
+
+	&-right {
+
+		.block-sku {
+
+			&-detail-sku-name {
+
+				.selection {
+					color: #000;
+				}
+
+			}
+
+			&-detail-sku-container {
+
+				&-list {
+
+					li {
+						@include rempxem(line-height, $font-size-base, 27px, true);
+						margin: 0 7px 5px 0;
+					}
+
+					.cnt {
+
+						&.size {
+							@include rempxem(min-width, $font-size-base, 40px, true);
+							@include rempxem(height, $font-size-base, 30px, true);
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.bx_ordercart,
+.unproduct_list {
+
+	.block-sku {
+		@include rempxem(font-size, $font-size-root, 11px);
+
+		&-detail-sku-container {
+
+			&-list {
+
+				li {
+					@include line-height($font-size-base, 27px, true);
+					margin: 0 7px 5px 0;
+				}
+
+				.cnt {
+
+					&.size {
+						@include rempxem(min-width, $font-size-base, 40px, true);
+						@include rempxem(height, $font-size-base, 30px, true);
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+.unproduct_list {
+
+	.block-sku {
+		@include rempxem(font-size, $font-size-root, $font-size-base);
+	}
+
+}

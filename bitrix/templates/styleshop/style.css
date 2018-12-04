@@ -1,0 +1,147 @@
+a:hover,
+a:focus {
+    color: #ff3082;
+}
+.top-panel .nav > li.favorites .wishlist-count:before,
+.unproduct .wishlist-remove:hover,
+.btn-primary2:hover,
+.btn-primary2:active,
+.btn-primary2:focus,
+.unproduct-item .unproduct-container:hover .button-container .un_buttoncart,
+.catalog-sidebar-item .un_buttoncart:hover,
+.banner-offer:before,
+.bx-soa-more-btn .pull-right.btn.btn-default,
+.btn-primary,
+#scrollUp ,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus,
+.bx-pagination ul li.bx-active .btn,
+.bx-pagination ul li:not(.bx-pag-prev):not(.bx-pag-next):hover a,
+.bx-filter .bx-ui-slider-track-container .bx-ui-slider-track .bx-ui-slider-pricebar-vn,
+.owlslider .owl-dots > .owl-dot.active:before,
+.owlslider .owl-dots > .owl-dot:hover:before,
+#header-mobile .nav > li > a.favorite .wishlist-count,
+#header .ajax-recall-button > a:before {
+	background: #ff7cb0;
+}
+#header .ajax-recall-button > a:hover:before {
+    background-color: #ff3082;
+}
+.loader,
+.navbar-nav > .menu-item-link:not(.parent) > a:hover,
+.navbar-nav > .menu-item-link:not(.parent) > a:focus,
+.unproduct .wishlist-remove:hover,
+.catalog-tabs .nav-pills > li.active > a,
+.navbar-nav > .menu-item-link.open > a,
+.nav .open > a, .nav .open > a:hover,
+.nav .open > a:focus,
+.btn-primary2:hover,
+.btn-primary2:active,
+.btn-primary2:focus,
+.unproduct-item .unproduct-container:hover .button-container .un_buttoncart,
+.catalog-sidebar-item .un_buttoncart:hover,
+.bx-soa-more-btn .pull-right.btn.btn-default,
+.bx-pagination ul li.bx-active .btn,
+.bx-pagination ul li:not(.bx-pag-prev):not(.bx-pag-next):hover a,
+.bx-filter .bx-ui-slider-track-container .bx-ui-slider-track .bx-ui-slider-range .bx-ui-slider-handle.left,
+.bx-filter .bx-ui-slider-track-container .bx-ui-slider-track .bx-ui-slider-range .bx-ui-slider-handle.right,
+.btn-primary {
+	border-color: #ff7cb0;
+}
+a,
+.btn-primary4:hover,
+.btn-primary4:focus,
+.btn-primary4,
+.bx-filter .bx-filter-param-label:not(.disabled):hover .bx-filter-param-text,
+.detail-product-images-photorama-img .owl-nav > div {
+	color: #ff7cb0;
+}
+.bx-soa-more-btn .pull-right.btn.btn-default:hover,
+.btn-primary:active,
+.btn-primary.active, .open > .btn-primary.dropdown-toggle,
+.btn-primary:hover {
+	background-color: #ff4991;
+	border-color: #ff3f8b;
+}
+.bx-soa-more-btn .pull-right.btn.btn-default:focus,
+.btn-primary:focus,
+.btn-primary.focus {
+    background-color: #ff4991;
+    border-color: #fc0064;
+}
+.bx-soa-more-btn .pull-right.btn.btn-default:active:hover,
+.bx-soa-more-btn .pull-right.btn.btn-default:active:focus,
+.bx-soa-more-btn .pull-right.btn.btn-default:active.focus,
+.bx-soa-more-btn .pull-right.btn.btn-default.active:hover,
+.bx-soa-more-btn .pull-right.btn.btn-default.active:focus,
+.bx-soa-more-btn .pull-right.btn.btn-default.active.focus,
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary:active.focus,
+.btn-primary.active:hover,
+.btn-primary.active:focus,
+.btn-primary.active.focus,
+.open > .btn-primary.dropdown-toggle:hover,
+.open > .btn-primary.dropdown-toggle:focus,
+.open > .btn-primary.dropdown-toggle.focus {
+    background-color: #ff257c;
+    border-color: #fc0064;
+}
+.block-sku-detail-sku-container-list li.active .cnt.color,
+.block-sku-detail-sku-container-list li.active .cnt.size,
+.block-sku-detail-sku-container-list2 li.active .cnt.color,
+.block-sku-detail-sku-container-list2 li .cnt.color:hover.color {
+    outline-color: #ff7cb0;
+}
+@media (max-width: 991px){
+	.minicart > .minicart-num {
+		background: #ff7cb0;
+		color: #fff;
+	}
+}
+
+#header .ajax-recall-button > a:before,
+#scrollUp:before,
+.unproduct .wishlist-remove:hover,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus,
+#header-mobile .nav > li > a.favorite .wishlist-count,
+.banner-offer,
+.banner-offer h2,
+.banner-offer .h2,
+.banner-offer h3,
+.banner-offer .h3,
+.banner-offer h4,
+.banner-offer .h4,
+.banner-offer h5,
+.banner-offer .h5,
+.banner-offer h6,
+.banner-offer .h6,
+.top-panel .nav > li.favorites .wishlist-count,
+.catalog-sidebar-item .un_buttoncart:hover,
+.detail-product-right .button-cart .un_buttoncart,
+.unproduct-item .unproduct-container:hover .button-container .un_buttoncart,
+.btn-primary2:hover,
+.btn-primary2:focus,
+.btn-primary2:active,
+.btn-primary,
+.btn-primary:active:hover,
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary:active.focus,
+.btn-primary.active:hover,
+.btn-primary.active:focus,
+.btn-primary.active.focus,
+.open > .btn-primary.dropdown-toggle:hover,
+.open > .btn-primary.dropdown-toggle:focus,
+.open > .btn-primary.dropdown-toggle.focus,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:hover {
+	color: #fff;
+}
+.banner-offer h5, .banner-offer .h5 {
+	border-color: #fff;
+}

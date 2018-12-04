@@ -1,0 +1,41 @@
+<?php
+$MESS["CP_MESS_TITLE"] = "Текст заголовка";
+$MESS["CP_BCS_MESS_TITLE_DEFAULT"] = "Просмотренные товары";
+$MESS["CP_BCS_TPL_HOVER_IMAGE"] = "Показывать альтернативное изображение при наведении мыши на товар";
+$MESS["MAX_WIDTH"] = "Макс. ширина картинки";
+$MESS["MAX_HEIGHT"] = "Макс. высота картинки";
+$MESS["CP_BCS_TPL_MESS_BTN_BUY"] = "Текст кнопки \"Купить\"";
+$MESS["CP_BCE_TPL_MESS_BTN_ADD_TO_BASKET"] = "Текст кнопки \"Добавить в корзину\"";
+$MESS["CP_BCE_TPL_MESS_BTN_ADDED_TO_BASKET"] = "Текст кнопки \"Товар в корзине\"";
+$MESS["CP_BCE_TPL_MESS_BTN_ADDED_TO_BASKET_DEFAULT"] = "В корзине";
+$MESS["CP_BCT_TPL_MESS_BTN_ADD_TO_BASKET"] = "Текст кнопки \"Добавить в корзину\"";
+$MESS["CP_BCT_TPL_MESS_BTN_ADD_TO_BASKET_DEFAULT"] = "В корзину";
+$MESS["CP_BCT_TPL_MESS_BTN_BUY"] = "Текст кнопки \"Купить\"";
+$MESS["CP_BCT_TPL_MESS_BTN_BUY_DEFAULT"] = "Купить";
+$MESS["CP_BCS_TPL_MESS_BTN_DETAIL"] = "Текст кнопки \"Подробнее\"";
+$MESS["CP_BCS_TPL_MESS_BTN_BUY_DEFAULT"] = "Купить";
+$MESS["CP_BCE_TPL_MESS_BTN_ADD_TO_BASKET_DEFAULT"] = "В корзину";
+$MESS["CP_BCS_TPL_MESS_BTN_DETAIL_DEFAULT"] = "Подробнее";
+$MESS["CP_BCS_TPL_ADD_TO_BASKET_ACTION"] = "Показывать кнопку добавления в корзину или покупки";
+$MESS["ADD_TO_BASKET_ACTION_BUY"] = "покупки";
+$MESS["ADD_TO_BASKET_ACTION_ADD"] = "добавления в корзину";
+$MESS["CP_BCT_TPL_SHOW_DISCOUNT_PERCENT"] = "Показывать процент скидки";
+$MESS["CP_BCS_TPL_SHOW_DISCOUNT_PERCENT"] = "Показывать процент скидки";
+$MESS["SHOW_DISCOUNT_PERCENT_TIP"] = "Вывод процентного значения скидки, если скидка есть";
+$MESS["CP_BCS_TPL_SHOW_OLD_PRICE"] = "Показывать старую цену";
+$MESS["SHOW_OLD_PRICE_TIP"] = "Показывать старую цену, если есть скидка";
+$MESS["CP_BCT_TPL_SHOW_OLD_PRICE"] = "Показывать старую цену";
+$MESS["CP_BCS_TPL_MESS_NOT_AVAILABLE"] = "Сообщение об отсутствии товара";
+$MESS["CP_BCS_TPL_MESS_NOT_AVAILABLE_DEFAULT"] = "Нет в наличии";
+/*********************** CAROUSEL ***********************/
+$MESS["USE_CAROUSEL"] = "Использовать карусель";
+$MESS["CAROUSEL_ITEMS"] = "Количество показанных элементов в каруселе";
+$MESS["SLIDER_SPEED"] = "Скорость смены (милисек.)";
+$MESS["SLIDER_AUTOPLAY"] = "Включить Автовоспроизведение";
+$MESS["SLIDER_SHOW_SPEED"] = "Время между переключениями (милисек.)";
+$MESS["SLIDER_AUTOPLAY_HOVER_PAUSE"] = "Пауза при наведении курсора мыши.";
+$MESS["MOUSE_DRAG"] = "Включить Mouse Drag (возможность листать карусель мышкой)";
+$MESS["SLIDER_NAV"] = "Включить навигационные стрелки (вперед/назад)";
+$MESS["SLIDER_LOOP"] = "Включить бесконечный цикл (Loop)";
+/********************** /CAROUSEL ***********************/
+$MESS["MSG_USE_SKU_TOOLTIP"] = "Включить подсказку к свойствам предложений";

@@ -1,0 +1,39 @@
+#header {
+	
+	.ajax-recall-button {
+		text-align: right;
+		
+		> a {
+			@include rempxem(font-size, $font-size-root, $font-size-base + 1);
+			color: $text-color;
+			text-decoration: none;
+
+			&:before {
+				@include rempxem(font-size, $font-size-root, 16px);
+				@include rempxem(margin-right, $font-size-root, 6px);
+				content: $fa-var-phone;
+				font-family: FontAwesome;
+				padding: 5px;
+		    background-color: $link-color;
+		    color: $btn-primary-color;
+        border-radius: 50%;
+        text-align: center;
+        width: 32px;
+		    height: 32px;
+		    display: inline-block;
+		    vertical-align: middle;
+			}
+
+			&:hover {
+
+				&:before {
+					background-color: $link-hover-color;
+				}
+
+			}
+
+		}
+
+	}
+
+}

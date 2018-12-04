@@ -1,0 +1,97 @@
+.view-mode {
+	float: left;
+	margin: 0 0 0 15px;
+}
+.sortbutton{
+    width: 7px;
+    height: 10px;
+    margin-top: 5px;
+}
+.sortbutton.up{
+    background: url(../../../../images/i_asc_arrow.gif) no-repeat;
+}
+.sortbutton.down{
+    background: url(../../../../images/i_desc_arrow.gif) no-repeat;
+}
+.sort-by label {
+    margin-top: 2px;
+}
+.sort-by {
+	float: left;	
+}
+.sort-by select {
+	padding: 0;
+	margin: 0 0 1px;
+	vertical-align: middle;
+	margin-top:-3px;
+}
+.sort-by label {
+	vertical-align: middle;
+	float: left;
+	margin-right:10px;	
+}
+.limiter {
+	float: left;
+	padding-right: 2px;
+	margin-left: 15px;
+}
+.limiter label{
+    margin-top: 2px;
+}
+.limiter label {
+	vertical-align: middle;
+	float: left;
+	margin-right:10px;
+}
+.limiter label.label-right {
+	float:right;
+	margin-left:10px;
+}
+.limiter select {
+	padding: 0;
+	margin: 0 0 1px;
+	vertical-align: middle;
+	margin-top:-3px;
+}
+.limiter .selectbox,
+.sort-by .selectbox{
+    float: left;
+}
+.view-mode label {
+	float: left;
+	padding: 1px 1px 1px 5px;
+	margin-right:10px;
+}
+.view-mode .view-mode-block-one,
+.view-mode .view-mode-block-two{
+    float: left;
+    border: 1px solid #ede9e9;
+    padding: 5px;
+}
+.view-mode .view-mode-block-two{
+    margin-left: 5px;
+}
+.view-mode .view-mode-block-one.selected,
+.view-mode .view-mode-block-two.selected{
+    border-color: #f2532f;
+}
+.view-mode .view-mode-block-one .images-grid,
+.view-mode .view-mode-block-two .images-grid{
+    background:url(../../../../images/grid2.png) no-repeat;
+    width: 32px;
+    height: 10px;
+    display: block;
+    text-indent: -9999px;
+}
+.view-mode .view-mode-block-one a.grid{
+    background-position: 0 -11px;
+}
+.view-mode .view-mode-block-one.selected a.grid{
+    background-position: 0 0;
+}
+.view-mode .view-mode-block-two a.grid{
+    background-position: -33px -11px;
+}
+.view-mode .view-mode-block-two.selected a.grid{
+    background-position: -33px 0;
+}

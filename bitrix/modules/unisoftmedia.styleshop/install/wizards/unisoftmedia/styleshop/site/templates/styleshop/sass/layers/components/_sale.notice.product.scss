@@ -1,0 +1,68 @@
+.notice {
+	margin-top: 15px;
+
+	&-link {
+		color: $gray-dark;
+		text-decoration: none;
+
+		&:before {
+			font-family: FontAwesome;
+			@include rempxem(margin-right, $font-size-root, 6px);
+			content: $fa-var-envelope-o;
+		}
+
+		&:hover,
+		&:focus {
+			color: #000;
+			text-decoration: none;
+		}
+
+	}
+
+	.panel {
+
+		&-heading {
+			position: relative;
+
+			&:before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				border-bottom: 1px solid $panel-inner-border;
+				width: 91%;
+			}
+
+		}
+
+		&-body {
+
+			td.padding-right {
+				padding-right: 8px;
+			}
+
+			td.padding-left {
+				padding-left: 8px;
+			}
+
+		}
+
+	}
+
+}
+
+.popup-window {
+
+	.notice {
+		margin-top: 0;
+
+		.panel {
+
+			&-heading {
+				margin-top: -7px;
+			}
+
+		}
+
+	}
+
+}

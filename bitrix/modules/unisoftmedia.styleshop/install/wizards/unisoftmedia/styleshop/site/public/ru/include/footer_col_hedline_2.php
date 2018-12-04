@@ -1,0 +1,1 @@
+<?=GetMessage('FOOTER_DOP')?>

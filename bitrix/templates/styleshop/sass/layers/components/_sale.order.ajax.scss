@@ -1,0 +1,794 @@
+// Confirm
+.sale_order_access {
+	@include rempxem(top, $font-size-root, 18px);
+	left: 50%;
+	position: absolute;
+	@include rempxem(width, $font-size-root, 70px);
+	@include rempxem(height, $font-size-root, 70px);
+	@include translate(-50%, 0);
+	border: 1px solid $state-success-bg;
+	background-color: $state-success-bg;
+	border-radius: 50%;
+
+	&:after {
+		content: "";
+		@include rempxem(width, $font-size-root, 36px);
+		@include rempxem(height, $font-size-root, 16px);
+		@include rotate(-45deg);
+		left: 27%;
+		top: 31%;
+		position: absolute;
+		border: 1px solid $state-success-text;
+		border-top: none;
+		border-right: none;
+	}
+
+}
+
+.sale_order_full_table {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	max-width: 730px;
+
+	&:first-of-type {
+		@include rempxem(padding-top, $font-size-root, 105px);
+		text-align: center;
+	}
+
+	&:last-of-type {
+		border: 1px solid $table-border-color;
+		@include rempxem(padding, $font-size-root, 30px 30px);
+	}
+
+	.ps_logo {
+
+		.pay_name {
+			margin-top: 0;
+		}
+
+	}
+
+	input[type="submit"],
+	button[type="submit"] {
+		@include rempxem(margin-bottom, $font-size-root, 10px);
+	}
+
+}
+
+/////////////////////////////////////
+.icon-success {
+	position: absolute;
+	@include rempxem(left, $font-size-root, 16px);
+	@include rempxem(width, $font-size-root, 21px);
+	@include rempxem(height, $font-size-root, 21px);
+	background-size: contain;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjEgMjEiPjxzdHlsZT4uc3Qwe2ZpbGw6IzcxYmEyNH08L3N0eWxlPjxwYXRoIGlkPSJGb3JtYV8xIiBjbGFzcz0ic3QwIiBkPSJNMTAuNSAwQzQuNyAwIDAgNC43IDAgMTAuNVM0LjcgMjEgMTAuNSAyMSAyMSAxNi4zIDIxIDEwLjUgMTYuMyAwIDEwLjUgMHpNOSAxNS40bC01LTQuOSAyLTIgMyAzIDYtNS45IDIgMi04IDcuOHoiLz48L3N2Zz4=);
+}
+.icon-warning {
+	position: absolute;
+	@include rempxem(left, $font-size-root, 16px);
+	@include rempxem(width, $font-size-root, 22px);
+	@include rempxem(height, $font-size-root, 20px);
+	background-size: contain;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjIgMjAiPjxzdHlsZT4uc3Qwe2ZpbGw6I2RlYTcxMn08L3N0eWxlPjxwYXRoIGlkPSJGb3JtYV8xIiBjbGFzcz0ic3QwIiBkPSJNMjEuNyAxNi43TDEyLjkgMS4xQzEyLjMuMSAxMS0uMyAxMCAuM2MtLjQuMi0uNy41LS45LjhMLjMgMTYuN2MtLjQuNy0uNCAxLjUgMCAyLjIuNC43IDEuMSAxLjEgMS45IDEuMWgxNy43Yy44IDAgMS41LS40IDEuOS0xLjEuMy0uNy4zLTEuNS0uMS0yLjJ6bS0xMC43LjhjLS44IDAtMS40LS42LTEuNS0xLjQgMC0uOC42LTEuNCAxLjQtMS41LjggMCAxLjQuNiAxLjUgMS40IDAgLjgtLjYgMS41LTEuNCAxLjV6bTEuNC02LjJjMCAuOC0uNiAxLjQtMS40IDEuNHMtMS40LS42LTEuNC0xLjRWNC43YzAtLjQuMy0uNy43LS43aDEuNWMuNCAwIC43LjMuNy43bC0uMSA2LjZ6Ii8+PC9zdmc+);
+}
+
+#bx-soa-order {
+	counter-reset: heading;
+}
+
+.bx-soa-section {
+	@include rempxem(margin-bottom, $font-size-root, 6px);
+	border-radius: $border-radius-base;
+	border: 1px solid $panel-inner-border;
+
+	.bx-soa-editstep {
+		border-bottom: 1px dotted;
+		text-decoration: none;
+	}
+
+	&.bx-selected {
+		border-color: $brand-info;
+
+		.bx-soa-section-title-container {
+			padding: 15px 0;
+		}
+
+		.bx-soa-section-title {
+			@include rempxem(font-size, $font-size-root, 20px);
+		}
+
+		.bx-soa-editstep {
+			display: none;
+		}
+
+		.bx-scu-container {
+			height: auto !important;
+
+			&:after {
+				height: 0 !important;
+			}
+
+		}
+
+	}
+
+	&.bx-step-completed {
+		border-color: $brand-success;
+
+		.bx-soa-section-title {
+
+			&-count {
+				background: $brand-success;
+				border-color: $brand-success;
+
+				&:before {
+					content: "";
+					background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjEgMjEiPjxzdHlsZT4uc3Qwe2ZpbGw6IzcxYmEyNH08L3N0eWxlPjxwYXRoIGlkPSJGb3JtYV8xIiBjbGFzcz0ic3QwIiBkPSJNMTAuNSAwQzQuNyAwIDAgNC43IDAgMTAuNVM0LjcgMjEgMTAuNSAyMSAyMSAxNi4zIDIxIDEwLjUgMTYuMyAwIDEwLjUgMHpNOSAxNS40bC01LTQuOSAyLTIgMyAzIDYtNS45IDIgMi04IDcuOHoiLz48L3N2Zz4=);
+					position: absolute;
+					@include rempxem(width, $font-size-root, 12px);
+					@include rempxem(height, $font-size-root, 12px);
+					@include rempxem(top, $font-size-root, 6px);
+					@include rempxem(left, $font-size-root, 11px);
+					border: 1px solid #fff;
+					border-radius: 50%;
+				}
+
+				&:after {
+					color: #fff;
+				}
+
+			}
+
+		}
+
+	}
+
+	&-title-container {
+		background-color: $panel-default-heading-bg;
+		padding: 7px 0;
+		overflow: hidden;
+	}
+
+	&-title {
+		margin: 0;
+		@include rempxem(font-size, $font-size-root, 16px);
+
+		&-count {
+			display: inline-block;
+			@include rempxem(min-width, $font-size-root, 17px);
+			@include rempxem(height, $font-size-root, 17px);
+			border-radius: 8px;
+			border: 1px solid $gray-light;
+			vertical-align: middle;
+			position: relative;
+			margin: -3px 10px 0 0;
+
+			&:after {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				text-align: center;
+				@include rempxem(font-size, $font-size-root, 10px);
+				@include rempxem(line-height, $font-size-root, 15px);
+				color: $gray-light;
+				counter-increment: heading;
+				content: counter(heading);
+				@include transition(all $animate ease);
+			}
+
+		}
+
+	}
+
+	&-content {
+		padding: $panel-body-padding;
+
+		.bx-soa-pp-price {
+			text-align: right;
+			@include rempxem(padding, $font-size-root, 4px 0);
+		}
+
+	}
+
+	.bx-soa-table-fade {
+		position: relative;
+	}
+
+	.bx-soa-item-table {
+		margin-top: -10px;
+		min-width: 100%;
+		display: table;
+
+		.bx-soa-item-tr {
+
+			@media (min-width: $screen-sm-min) {
+
+				& {
+					display: table-row;
+				}
+
+			}
+
+			@media (max-width: $screen-xs-max) {
+
+				& {
+					@include clearfix();
+					border-top: 1px solid $table-border-color;
+				}
+
+			}
+
+		}
+
+		.bx-soa-item-td {
+			display: table-cell;
+			vertical-align: top;
+			padding: 10px 0;
+
+			.bx-soa-item-img-block {
+				float: left;
+				@include rempxem(padding-right, $font-size-root, 15px);
+				@include rempxem(width, $font-size-root, 85px);
+				margin: 0;
+
+				.bx-soa-item-imgcontainer {
+					border-radius: $border-radius-base;
+					border: $image-product-border;
+					padding-top: 100%;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+
+			}
+
+			.bx-soa-item-content {
+
+				.bx-soa-item-title {
+					padding-bottom: 5px;
+
+					a {
+						color: $gray-dark;
+						@include rempxem(font-size, $font-size-root, 15px);
+					}
+
+				}
+
+				.bx-scu-container {
+					position: relative;
+					font-style: italic;
+					@include rempxem(max-width, $font-size-root, 200px);
+					overflow: hidden;
+
+					.bx-soa-item-td-title {
+						font-weight: 600;
+						clear: both;
+						float: left;
+						@include rempxem(font-size, $font-size-root, 13px);
+						padding-right: 5px;
+
+						&:after {
+							content: ":";
+						}
+
+					}
+
+					.bx-soa-item-td-text {
+						float: left;
+
+						.bx-price {
+							white-space: nowrap;
+						}
+
+					}
+
+					&:after {
+						content: "";
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						height: 0;
+						background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+						background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+						background: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+
+						@media (min-width: $screen-sm-min) {
+
+							& {
+								@include rempxem(height, $font-size-root, 25px);
+							}
+
+						}
+
+					}
+
+					@media (min-width: $screen-sm-min) {
+
+						& {
+							@include rempxem(height, $font-size-root, 35px);
+						}
+
+					}
+
+				}
+
+			}
+
+			@media (max-width: $screen-xs-max) {
+
+				& {
+					display: block;
+					width: 100% !important;
+					min-width: 100% !important;
+					float: left;
+
+					.bx-soa-item-td-title,
+					.bx-soa-item-td-text {
+						display: inline-block !important;
+						text-align: left;
+						vertical-align: middle;
+						@include rempxem(padding-right, $font-size-root, 10px);
+					}
+
+				}
+
+				&:nth-child(1n+2) {
+					@include rempxem(padding-left, $font-size-root, 85px);
+				}
+
+			}
+
+			@media (min-width: $screen-sm-min) {
+
+				& {
+					border-top: 1px solid $table-border-color;
+				}
+
+			}
+
+		}
+
+	}
+
+	.bx-soa-item-properties.bx-text-right .bx-soa-item-td-title,
+	.bx-soa-item-properties.bx-text-right .bx-soa-item-td-text {
+		text-align: right;
+	}
+
+	.bx-price-old {
+		white-space: nowrap;
+		text-decoration: line-through;
+		color: $old-price-color;
+		@include rempxem(font-size, $font-size-root, 13px);
+	}
+
+	.bx-soa-coupon,
+	.bx-soa-more {
+		border-top: 1px solid $panel-inner-border;
+		@include rempxem(padding-top, $font-size-root, 10px);
+		@include rempxem(margin-top, $font-size-root, 10px);
+	}
+
+	.bx-soa-coupon {
+
+		&-block {
+			display: inline-block;
+		}
+
+		&-input {
+			display: inline-block;
+			position: relative;
+
+			&:after {
+				content: "";
+				display: block;
+				@include rempxem(width, $font-size-root, 8px);
+				@include rempxem(height, $font-size-root, 8px);
+				background-color: transparent;
+				border-right: 2px solid $gray;
+				border-bottom: 2px solid $gray;
+				position: absolute;
+				@include rempxem(right, $font-size-root, 10px);
+				top: 50%;
+				margin-top: -4px;
+				@include rotate(-45deg);
+				cursor: pointer;
+			}
+
+		}
+
+		&-item {
+			display: block;
+
+			strong {
+				@include rempxem(margin-top, $font-size-root, 15px);
+				text-transform: uppercase;
+				@include rempxem(font-size, $font-size-root, 15px);
+				font-weight: bold;
+				letter-spacing: -0.5px;
+				display: block;
+
+				&.bx-soa-coupon-item-danger {
+					color: $brand-danger;
+				}
+
+				&.bx-soa-coupon-item-success {
+					color: $brand-success;
+				}
+
+				.bx-soa-tooltip {
+					opacity: 1;
+					position: relative;
+
+					.tooltip-arrow {
+						display: none;
+					}
+
+					@media (min-width: $screen-xs-min) {
+
+						& {
+							@include rempxem(margin-left, $font-size-root, 15px);
+							float: right;
+						}
+
+					}
+
+				}
+
+			}
+
+			.bx-soa-coupon-remove {
+				float: right;
+				@include rempxem(margin-left, $font-size-root, 3px);
+				@include rempxem(width, $font-size-root, 20px);
+				@include rempxem(height, $font-size-root, 20px);
+				background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANhJREFUeNpEkM0KwjAQhGdr/Dv6Nj6EXkRvehTfRhS868lWWigU9OFEHGeTqIF0dydftrMJp0s1McMdwJ5AY0iLKaxVbwGbBxgeJKaCS4NjbJxQvlE4a/ektUFX9w5JCNolEzQmGCHlT8VjEFQjdvrBN0EOF4oOrXS5Cxmqs7NKVSEroPHlkLLOLRX4r5HOjenf3tE7DDyjxCLNx032ZFovSe80BK7Sl9IQmJ4gT4foSfowe+47jGx+xzidQxY9Zd/+/cLbIC8ztW9VHBL0fXDWGdeDc/ERYABB6E45iF95UQAAAABJRU5ErkJggg==) no-repeat center;
+				cursor:pointer;
+				vertical-align:middle;
+				position:relative;
+				top:-1px
+			}
+
+		}
+
+	}
+
+	span.bx-authform-starrequired {
+		color: $brand-danger;
+	}
+
+	.bx-soa-tooltip {
+
+		&.bx-soa-tooltip-static {
+			position: relative;
+			z-index: 0;
+
+			.tooltip-arrow {
+				left: 20px;
+			}
+
+		}
+
+		&.bx-soa-tooltip-danger {
+
+			.tooltip-arrow {
+				border-top-color: #F2DEDE;
+			}
+
+			.tooltip-inner {
+				background: #F2DEDE;
+				color: #A94442;
+			}
+
+		}
+
+		.tooltip-inner {
+			@include rempxem(max-width, $font-size-root, 300px);
+		}
+
+	}
+
+	.bx-sls {
+
+		.bx-ui-sls-fake,
+		.bx-ui-sls-route {
+			height: $input-height-base - 2;
+		}
+
+		.dropdown-fade2white {
+			height: 28px;
+		}
+
+		.dropdown-block {
+			border: 1px solid $input-border;
+			border-radius: $input-border-radius;
+			@include rempxem(font-size, $font-size-root, $font-size-base);
+			@include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+			@include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+		}
+
+	}
+
+	.bx-soa-reference {
+		color: $gray-light;
+		@include rempxem(font-size, $font-size-root, 11px);
+		@include rempxem(padding-top, $font-size-root, 10px);
+		@include rempxem(padding-bottom, $font-size-root, 20px);
+	}
+
+}
+
+.bx-soa-sidebar {
+	position: relative;
+	height: 100%;
+}
+
+.bx-soa-cart-total-ghost {
+
+	@media (max-width: $screen-sm-max) {
+
+		& {
+			display: none;
+		}
+
+	}
+
+}
+
+.bx-soa-cart-total {
+	border: 1px solid $well-border;
+	border-radius: $input-border-radius;
+	background-color: $well-bg;
+	@include rempxem(padding, $font-size-root, 20px);
+	@include transition(opacity $animate ease);
+
+	&.bx-soa-cart-total-fixed {
+		position: fixed;
+		@include rempxem(top, $font-size-root, 10px);
+	}
+
+	&.bx-soa-cart-total-bottom {
+		opacity: 0;
+
+		@media (max-width: $screen-sm-max) {
+
+			& {
+				opacity: 1!important;
+				position: static;
+			}
+
+		}
+
+	}
+
+	&-line {
+		@include rempxem(padding, $font-size-root, 5px 0);
+		@include rempxem(font-size, $font-size-root, $font-size-base);
+		@include rempxem(line-height, $font-size-root, 25px);
+		border-top: 1px solid $panel-inner-border;
+		overflow: hidden;
+
+		&:first-child {
+			border-top: none;
+		}
+
+		&-total {
+			@include rempxem(padding-top, $font-size-root, 25px);
+			border-bottom: none;
+			@include rempxem(padding, $font-size-root, 5px 0);
+			@include rempxem(font-size, $font-size-root, 13px);
+			@include rempxem(line-height, $font-size-root, 25px);
+			border-top: 1px solid $panel-inner-border;
+			overflow: hidden;
+
+			.bx-soa-cart-d {
+				font-size: 20px !important;
+			}
+
+		}
+
+	}
+
+	.bx-soa-cart-t {
+		float: left;
+		font-weight: bold;
+	}
+
+	.bx-soa-cart-d {
+		float: right;
+	}
+
+	.bx-price-old {
+		white-space: nowrap;
+		text-decoration: line-through;
+		color: $old-price-color;
+		@include rempxem(font-size, $font-size-root, 13px);
+	}
+
+	.bx-soa-cart-total-button-container {
+		padding-top: 20px;
+
+		@media (max-width: $screen-sm-max) {
+
+			& {
+				display: block !important;
+			}
+
+		}
+
+		.btn-order-save {
+			@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+			display: block;
+		}
+
+	}
+
+}
+
+// Delivered
+.bx-soa-pp {
+
+	&-company {
+		@include rempxem(padding, $font-size-root, 7px);
+		border: 1px solid transparent;
+		@include transition(all 100ms ease);
+		z-index: 100;
+		position: relative;
+
+		@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+
+			&:nth-child(3n+1) {
+				clear: both;
+			}
+
+		}
+
+		@media (min-width: $screen-lg-min) {
+
+			&:nth-child(4n+1) {
+				clear: both;
+			}
+
+		}
+
+		@media (max-width: $screen-xs-max) {
+
+			&:nth-child(2n+1) {
+				clear: both;
+			}
+
+		}
+
+		&-graf-container {
+			border: 2px solid #c3cace;
+			border-radius: 2px;
+			position: relative;
+			background: #fff;
+			width: auto;
+			height: 0;
+			padding-top: 50%;
+		}
+
+		&-image {
+			position: absolute;
+			@include rempxem(top, $font-size-root, 5px);
+			@include rempxem(left, $font-size-root, 5px);
+			@include rempxem(bottom, $font-size-root, 5px);
+			@include rempxem(right, $font-size-root, 5px);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&-smalltitle {
+			@include rempxem(padding-top, $font-size-root, 9px);
+			@include rempxem(font-size, $font-size-root, 11px);
+			@include rempxem(padding-bottom, $font-size-root, 5px);
+			color: #a3a3a3;
+			text-align: center;
+		}
+
+		&.bx-selected {
+
+			.bx-soa-pp-company-graf-container {
+				border-color: $brand-info;
+			}
+
+		}
+
+	}
+
+	&-delivery-cost {
+		position: absolute;
+		@include rempxem(font-size, $font-size-root, 14px);
+		@include rempxem(line-height, $font-size-root, 14px);
+		@include rempxem(padding, $font-size-root, 2px 4px);
+		@include rempxem(right, $font-size-root, -2px);
+		@include rempxem(bottom, $font-size-root, -2px);
+		color: #fff;
+		border-radius: 1px;
+		background: rgba(0, 0, 0, .5);
+	}
+
+	input[type=checkbox].bx-soa-pp-company-checkbox {
+		position: absolute;
+		@include rempxem(top, $font-size-root, 7px);
+		@include rempxem(left, $font-size-root, 7px);
+		margin: 0;
+		padding: 0;
+		z-index: 100;
+	}
+
+	.bx-soa-pp-desc-container {
+		padding-top: 7px;
+
+		.bx-soa-pp-company {
+			background-color: $panel-footer-bg;
+			border: 1px solid $panel-inner-border;
+			@include rempxem(padding, $font-size-root, 7px 15px);
+
+			&-subTitle {
+				@include rempxem(font-size, $font-size-root, 15px);
+				font-weight: bold;
+			}
+
+			&-logo {
+				@include rempxem(max-width, $font-size-root, 150px);
+			}
+
+			&-desc {
+				@include rempxem(font-size, $font-size-root, $font-size-base);
+				@include rempxem(padding-top, $font-size-root, 10px);
+				@include rempxem(line-height, $font-size-root, 17px);
+			}
+
+		}
+
+	}
+
+	ul {
+
+		&.bx-soa-pp-list {
+			@include rempxem(margin, $font-size-root, 10px 0);
+			padding: 0;
+			list-style: none;
+			@include rempxem(font-size, $font-size-root, 13px);
+			color: #000;
+
+			li {
+				clear: both;
+				@include rempxem(padding, $font-size-root, 5px 0);
+
+				.bx-soa-pp-list-termin {
+					color: $gray-light;
+					display: block;
+				}
+
+				.bx-soa-pp-list-description {
+					display: block;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.bx-soa-more {
+
+	&-btn {
+
+		.pull-right.btn.btn-default {
+			@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+		}
+
+	}
+
+}

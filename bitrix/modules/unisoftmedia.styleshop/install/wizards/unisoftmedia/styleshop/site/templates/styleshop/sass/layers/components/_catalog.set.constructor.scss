@@ -1,0 +1,261 @@
+.constructor {
+
+	.img-thumbnail {
+		width: 100%;
+	}
+
+}
+
+.bx-modal-container {
+	margin-top: 20px;
+	border-radius: $panel-border-radius;
+	border: 1px solid $panel-inner-border;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+
+	.bx-original-item-container {
+		margin-bottom: 9px;
+
+		@media (max-width: $grid-float-breakpoint-max) {
+
+			& {
+				text-align: center;
+			}
+
+		}
+
+	}
+
+	.bx-added-item-table {
+
+		a {
+			color: $gray-dark;
+		}
+
+	}
+
+	.bx-catalog-set-item-title {
+
+		a {
+			color: $gray-dark;
+		}
+
+	}
+
+	.bx-modal-small-title {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	.bx-constructor-container-result {
+		text-align: center;
+
+		@media (max-width: $screen-xs-max) {
+
+			& {
+				margin-bottom: 20px;
+			}
+
+		}
+
+	}
+
+	.bx-item-set-current-price {
+		display: block;
+		margin-top: 2px;
+		padding: 0 10px;
+		text-align: center;
+		white-space: nowrap;
+		@include font-size($font-size-root, 17px);
+		@include line-height($font-size-root, 25px);
+		margin-bottom: 3px;
+	}
+
+	.bx-added-item-old-price {
+		padding: 0;
+		@include font-size($font-size-root, 11px);
+		@include line-height($font-size-root, 11px);
+	}
+
+	.bx-item-set-economy-price {
+		white-space: nowrap;
+		@include font-size($font-size-root, 11px);
+		@include line-height($font-size-root, 11px);
+		padding: 0 0 10px;
+		display: block;
+	}
+
+	.bx-catalog-set-topsale-slider-box {
+		position: relative;
+
+		&:before {
+			left: 0;
+			background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+			background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+			background: -o-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+			background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+			background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+		}
+
+		&:after {
+			right: 0;
+			background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+			background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+			background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+			background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+			background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+		}
+
+		&:before,
+		&:after {
+			position: absolute;
+			content: " ";
+			top: 0;
+			bottom: 0;
+			@include width($font-size-root, 50px);
+			z-index: 1000;
+		}
+
+		.bx-catalog-set-topsale-slider-container {
+			overflow-y: hidden;
+			overflow-x: auto;
+			position: relative;
+			-webkit-overflow-scrolling: touch;
+
+			.bx-catalog-set-item-container {
+				position: relative;
+				min-height: 20px;
+				float: left;
+			}
+
+			.bx-catalog-set-item {
+				border: 1px solid transparent;
+				overflow: hidden;
+				border-radius: 3px;
+				background: #FFF;
+				@include transition(all $animate ease);
+				padding-bottom: 10px;
+
+				&-img {
+					padding: 10px;
+					position: relative;
+					padding-top: 109% !important;
+					height: 0;
+
+					&-container {
+						position: absolute;
+						top: 5px;
+						right: 5px;
+						bottom: 5px;
+						left: 5px;
+
+						img {
+							position: absolute;
+							top: 50%;
+							-webkit-transform: translateY(-50%);
+							-moz-transform: translateY(-50%);
+							-ms-transform: translateY(-50%);
+							-o-transform: translateY(-50%);
+							transform: translateY(-50%);
+
+						}
+
+					}
+
+				}
+
+				&-title {
+					@include line-height($font-size-root, 15px);
+					@include height($font-size-root, 35px);
+					overflow: hidden;
+					vertical-align: top;
+					padding: 5px 15px;
+					position: relative;
+
+					&:after {
+						content: "";
+						background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+						background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+						background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+						background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+						background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+						bottom: 0;
+						right: 0;
+						left: 0;
+						@include height($font-size-root, 10px);
+						position: absolute;
+						@include transition(opacity $animate ease);
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.bx-added-item-table-container {
+
+		.bx-added-item-table {
+
+			.bx-added-item-table-cell-img {
+				@include width($font-size-root, 50px);
+
+				@media (max-width: $screen-xs-max) {
+
+					& {
+						float: left;
+					}
+
+				}
+
+				@media (max-width: 374px) {
+
+					& {
+						display: none;
+					}
+
+				}
+
+			}
+
+			.bx-added-item-table-cell-price {
+				@include width($font-size-root, 150px);
+				text-align: left;
+
+				.bx-added-item-new-price {
+					white-space: nowrap;
+				}
+
+			}
+
+		}
+
+	}
+
+	.bx-added-item-delete {
+		display: inline-block;
+		@include width($font-size-root, 30px);
+		@include height($font-size-root, 30px);
+		cursor: pointer;
+		background: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABaAAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRDMkRGNUY2QjgzMTExRTRCNDgzQ0YwMDY1Mzg5OUZBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRDMkRGNUY3QjgzMTExRTRCNDgzQ0YwMDY1Mzg5OUZBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEMyREY1RjRCODMxMTFFNEI0ODNDRjAwNjUzODk5RkEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEMyREY1RjVCODMxMTFFNEI0ODNDRjAwNjUzODk5RkEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAgEBAQICAgEBAgICAgICAgICAwIDAwMDAgMDBAQEBAQDBQUFBQUFBwcHBwcICAgICAgICAgIAQEBAQICAgUDAwUHBQQFBwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAj/wAARCAAJAAkDAREAAhEBAxEB/8QAawAAAwEAAAAAAAAAAAAAAAAAAAUICgEAAwEBAAAAAAAAAAAAAAAAAAEEAwUQAAEDAgMJAAAAAAAAAAAAAAMCBAYSBQATCEJyI7XVlgdXOBEAAgIBBQAAAAAAAAAAAAAAAAFRIgIRMYGhQv/aAAwDAQACEQMRAD8A1KSiUXhneJpFYrNL850qOb8EU/n4QrentZ3qyEes2b0hFFW0WVSc0tKqatqri9HHFaJtWIm42LOyNPXsxPe1z6hiS8dG9JAHz15M3ZtzO4YPa4DwxrhDP//Z') no-repeat center;
+	}
+
+	.bx-catalog-set-item-price {
+		text-align: center;
+		min-height: 50px;
+		padding: 5px 15px 0;
+	}
+
+	.bx-catalog-set-item-add-btn {
+		text-align: center;
+	}
+
+}

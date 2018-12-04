@@ -1,0 +1,14 @@
+#kuznica_megameta{
+	width: 800px;
+	background: #fff;
+	position: static;
+	opacity: 1;
+}
+#kuznica_megameta .li-item{
+	padding-left: 10px;
+	display: inline-block;
+}
+#kuznica_megameta .li-item-2{
+	padding-left: 30px;
+	display: inline-block;
+}

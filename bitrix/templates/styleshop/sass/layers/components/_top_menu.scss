@@ -1,0 +1,35 @@
+#header {
+
+	.nav-pills {
+
+		> li {
+
+			> a {
+				@include rempxem(font-size, $font-size-root, 16px);
+				color: $text-color;
+
+				&:hover,
+				&:focus {
+					background-color: transparent;
+					color: $link-color;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.nav {
+
+	.more {
+
+		.caret {
+			display: none;
+		}
+
+	}
+
+}

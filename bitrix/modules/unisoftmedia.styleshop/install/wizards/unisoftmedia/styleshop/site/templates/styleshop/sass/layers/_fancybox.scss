@@ -1,0 +1,62 @@
+.fancybox-skin {
+	background: #fff;
+	color: $gray;
+}
+
+.fancybox-title {
+	padding: 0 0 15px 0;
+	margin-bottom: 20px;
+	@include font-size($font-size-root, 20px);
+	border-bottom: 1px solid $panel-inner-border;
+	visibility: visible;
+	z-index: 5;
+}
+
+.fancybox-close {
+	background-image: none;
+	top: 15px;
+	right: 15px;
+	width: 18px;
+	height: 18px;
+
+	&:before {
+		content: "";
+		border: 1px solid #7c7c7c;
+		@include rotate(-45deg);
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		position: absolute;
+		left: -1px;
+		top: 5px;
+		width: 18px;
+		height: 5px;
+	}
+
+	&:after {
+		content: "";
+		border: 1px solid #7c7c7c;
+		@include rotate(45deg);
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		position: absolute;
+		left: 2px;
+		top: 5px;
+		width: 18px;
+		height: 5px;
+	}
+
+	&:hover {
+
+		&:before {
+			border-color: #000;
+		}
+
+		&:after {
+			border-color: #000;
+		}
+
+	}
+
+}

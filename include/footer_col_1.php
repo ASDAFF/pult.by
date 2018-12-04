@@ -1,0 +1,1 @@
+<?//=GetMessage('COPYRIGHT_DESC')?>

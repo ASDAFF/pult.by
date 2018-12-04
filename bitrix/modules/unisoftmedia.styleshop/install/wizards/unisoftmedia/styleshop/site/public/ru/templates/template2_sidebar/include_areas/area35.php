@@ -1,0 +1,1 @@
+<img alt="О компании" src="/bitrix/templates/#TEMPLATE_ID#/images/about_company.jpg">

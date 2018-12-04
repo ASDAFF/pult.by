@@ -1,0 +1,61 @@
+.post-list {
+
+	&-item {
+		padding: 10px;
+	}
+
+	&-name {
+		margin-top: 0;
+
+		a {
+			color: $gray-darker;
+
+			&:focus,
+			&:hover {
+				color: $gray-darker;
+			}
+
+		}
+
+	}
+
+	&-1 {
+		margin-bottom: 10px;
+	}
+
+}
+
+.post-list-sidebar {
+
+	&-item {
+		padding: 10px 0;
+
+		& + & {
+			border-top: 1px solid $panel-inner-border;
+		}
+
+	}
+
+	&-name {
+		margin-top: 0;
+		margin-bottom: 0;
+
+		a {
+			color: $gray-darker;
+		}
+
+	}
+
+	&-desc {
+		margin-top: 9px;
+	}
+
+	&-1 {
+
+		&.col-lg-12 {
+			margin-bottom: 10px;
+		}
+
+	}
+
+}

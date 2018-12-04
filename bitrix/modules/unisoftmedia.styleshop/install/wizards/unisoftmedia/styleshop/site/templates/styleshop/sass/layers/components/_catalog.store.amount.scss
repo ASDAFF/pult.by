@@ -1,0 +1,41 @@
+.available {
+
+	.dropdown-menu {
+
+		.panel-heading {
+			margin: 0;
+			position: relative;
+	    text-transform: uppercase;
+
+			&:before {
+		    content: "";
+		    position: absolute;
+		    bottom: 0;
+		    border-bottom: 1px solid $panel-inner-border;
+		    width: 91%;
+			}
+
+		}
+
+		.panel-body {
+			
+			> div {
+				color: $gray-light;
+				margin-bottom: 10px;
+
+				&:last-child  {
+					margin-bottom: 0;
+				}
+
+				a {
+					@include font-size($font-size-root, $font-size-base + 1);
+					color: #000;
+				}
+
+			}
+
+		}
+
+	}
+
+}

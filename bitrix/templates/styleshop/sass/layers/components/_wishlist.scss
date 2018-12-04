@@ -1,0 +1,79 @@
+.wishlist {
+
+	&-item-list {
+		width: 330px;
+
+		@media (max-width: $screen-xs-max) {
+
+			& {
+				width: 300px;
+			}
+
+		}
+
+		&-container {
+			margin-bottom: 0;
+			position: relative;
+		}
+
+		.panel-body {
+			margin: -10px 0;
+
+			&._empty {
+				margin: 0px;
+
+				> p {
+					margin: 0px;
+				}
+				
+			}
+
+		}
+
+		.jScrollPaneMiniwishlist {
+			max-height: 340px;
+
+		}
+
+		&-item {
+			padding: 10px 0;
+
+			&-name {
+				padding-right: 30px;
+
+				a {
+					color: $gray-darker;
+
+					&:focus,
+					&:hover {
+						color: $gray-darker;
+					}
+
+				}
+
+			}
+
+			.wishlist-remove {
+				@include font-size($font-size-root, $font-size-base + 3);
+				color: $gray-light;
+				position: absolute;
+				right: 18px;
+				top: 0;
+				text-decoration: none;
+
+				&:before {
+					font-family: FontAwesome;
+					content: $fa-var-trash;
+				}
+
+			}
+
+			.row {
+				margin-right: 0;
+			}
+
+		}
+
+	}
+
+}

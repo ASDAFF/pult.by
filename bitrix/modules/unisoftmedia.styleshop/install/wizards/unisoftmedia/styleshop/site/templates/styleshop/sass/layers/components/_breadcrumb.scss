@@ -1,0 +1,20 @@
+.frame_breadcrumb {
+	padding: 10px;
+  background-color: #fff;
+
+	.breadcrumb {
+		margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+		li {
+
+			a {
+				color: $gray-light;
+			}
+
+		}
+
+	}
+
+}

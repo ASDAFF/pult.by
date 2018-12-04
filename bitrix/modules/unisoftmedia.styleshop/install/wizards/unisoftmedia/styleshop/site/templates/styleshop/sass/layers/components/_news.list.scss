@@ -1,0 +1,65 @@
+.bx-newslist {
+
+	.grid {
+		display: -ms-flexbox;
+		-webkit-display: flex;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+
+		.bx-newslist-title {
+			margin-top: 9px;
+		}
+
+	}
+
+	&-container {
+		margin-bottom: 20px;
+	}
+
+	&-title {
+		margin-top: 0;
+
+		a {
+			color: $gray-darker;
+
+			&:focus,
+			&:hover {
+				color: $gray-darker;
+			}
+
+		}
+
+		@media (max-width: $screen-xs-max) {
+
+			& {
+				margin-top: 9px;
+			}
+
+		}
+
+	}
+
+	&-img {
+
+		img {
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			max-height: 100%;
+		}
+
+	}
+
+	&-action-date {
+
+		> span {
+			display: inline-block;
+			padding: 5px 7px;
+			color: #fff;
+		}
+
+	}
+
+}

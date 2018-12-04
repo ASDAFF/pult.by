@@ -1,0 +1,85 @@
+@import "components/catalog.section.list_sidebar";
+@import "components/catalog.smart.filter";
+@import "components/menu.left";
+
+.sidebar {
+
+  @media (min-width: $screen-md-min) {
+
+		& {
+			min-height: 300px;
+		}
+
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+
+	.panel-heading {
+		text-transform: uppercase;
+	}
+
+	.block {
+		margin: 0 0 20px 0;
+	}
+
+	.category-description-block {
+		padding-bottom: 0;
+	}
+
+	.content_price {
+		
+		.old-price {
+			display: block;
+		}
+
+	}
+
+	.unproduct {
+
+		.button-container {
+
+			.un_buttoncart {
+				@include font-size($font-size-root, $btn-basket-size - 1);
+
+				&:not(.more) {
+
+					&:before {
+						@include font-size($font-size-base, $btn-basket-size - 1, true);
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.block-sku {
+		@include rempxem(font-size, $font-size-root, 11px);
+	}
+
+	.unproduct-image-container {
+
+		.quick-view {
+			border-radius: 50%;
+			top: 50%;
+			@include translate(-50%, -50%);
+			@include rempxem(padding, $font-size-root, 6px);
+			@include rempxem(width, $font-size-root, 40px);
+			@include rempxem(height, $font-size-root, 40px);
+			text-align: center;
+			
+			&:before {
+				font-family: FontAwesome;
+				content: $fa-var-eye;
+				@include rempxem(font-size, $font-size-root, $font-size-base);
+			}
+
+		}
+
+	}
+
+}
