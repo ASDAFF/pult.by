@@ -190,7 +190,7 @@
 							</div>
 						</div>
 					</header>
-					<section id="catalog_menu" class="catalog_menu type_<?php echo $theme->Option()->get('menu_color', '', SITE_ID); ?> hidden-xs hidden-sm">
+					<div id="catalog_menu" class="catalog_menu type_<?php echo $theme->Option()->get('menu_color', '', SITE_ID); ?> hidden-xs hidden-sm">
 						<div class="container">
 							<div class="row">
 								<div class="col-sm-4 col-md-3 hidden-xs">
@@ -292,4 +292,4 @@
 											<!-- /minicart -->
 								</div>
 							</div>
-						</section>
+						</div>

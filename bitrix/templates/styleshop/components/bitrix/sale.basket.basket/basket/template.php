@@ -30,7 +30,7 @@ $arBasketJSParams = array(
 	'EVENT_ONCHANGE_ON_START' => (!empty($arResult['EVENT_ONCHANGE_ON_START']) && $arResult['EVENT_ONCHANGE_ON_START'] === 'Y') ? 'Y' : 'N'
 );
 ?>
-<script type="text/javascript">
+<script>
 	var basketJSParams = <?=CUtil::PhpToJSObject($arBasketJSParams);?>
 </script>
 <?

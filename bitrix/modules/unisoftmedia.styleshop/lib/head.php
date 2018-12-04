@@ -52,7 +52,7 @@ class Head {
 			foreach($fonts as $k => $font) {
 				$font_family .= '' . $k . '{font:' . $font . '}';
 			}
-			Asset::getInstance()->addString('<style type="text/css">' . $font_family . '</style>');
+			Asset::getInstance()->addString('<style>' . $font_family . '</style>');
 		}
 	}
 
@@ -62,6 +62,6 @@ class Head {
 		'$in_basket = [],'.
 		'$in_compare = [],'.
 		'$in_favorites = [];';
-		Asset::getInstance()->addString('<script type="text/javascript">' . $script . '</script>');
+		Asset::getInstance()->addString('<script>' . $script . '</script>');
 	}
 }

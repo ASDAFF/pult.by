@@ -1032,7 +1032,7 @@ JS;
 			$html .= '<style type="text/css">'.str_replace(array("\n", "\t"), "", self::getInjectedCSS())."</style>\n";
 		}
 
-		$html .= '<script type="text/javascript" data-skip-moving="true">'.
+		$html .= '<script data-skip-moving="true">'.
 				 str_replace(array("\n", "\t"), "", $inlineJS).
 				 "</script>";
 

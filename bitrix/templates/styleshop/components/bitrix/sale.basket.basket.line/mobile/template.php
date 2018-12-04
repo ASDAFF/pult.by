@@ -24,7 +24,7 @@ $arParams['cartId'] = $cartId;
 	?>
 </div>
 
-<script type="text/javascript">
+<script>
 	<?=$cartId?>.siteId       = '<?=SITE_ID?>';
 	<?=$cartId?>.cartId       = '<?=$cartId?>';
 	<?=$cartId?>.ajaxPath     = '<?=$componentPath?>/ajax.php';

@@ -1,6 +1,6 @@
 <?use Bitrix\Main\Localization\Loc;?>
 
-<section id="soc-subscribe">
+<div id="soc-subscribe">
     <div class="container">
         <div class="row">
             <div class="footer1 clearfix">
@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <footer id="footer">
     <div class="container">
         <div class="row">
@@ -226,7 +226,6 @@
                                         false,
                                         Array('HIDE_ICONS' => 'N')
                                     );?></span>
-                                    </span>
                                 </p></li>
                         </ul>
                     </address>

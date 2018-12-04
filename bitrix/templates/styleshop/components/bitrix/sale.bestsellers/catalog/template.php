@@ -409,7 +409,7 @@ if (!empty($arResult['ITEMS']))
 							</div>
 						</div>
 						<?if(!empty($arItem['OFFERS_PROP']) && $OFFERS) {
-							?><script type="text/javascript">
+							?><script>
 								var <? echo $strObName; ?> = new JSCatalog(<? echo CUtil::PhpToJSObject($arJSParams, false, true); ?>);
 							</script><?
 						}?>
